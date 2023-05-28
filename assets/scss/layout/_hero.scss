@@ -1,0 +1,194 @@
+.slider-height{
+    min-height: 400px;
+    background-position: center center;
+    background-size: cover;
+    @media #{$md}{
+        min-height: 300px;
+    }
+    @media #{$md}{
+        min-height: 300px;
+    }
+    @media #{$sm}{
+        min-height: 300px;
+    }
+    @media #{$xs}{
+        min-height: 300px;
+    }
+}
+.slider-height2{
+    min-height: 250px;
+    background-position: center center;
+    background-size: cover;
+    @media #{$md}{
+        min-height: 250px;
+    }
+    @media #{$sm}{
+        min-height: 250px;
+    }
+    @media #{$xs}{
+        min-height: 250px;
+    }
+}
+
+// Hero Overly
+.hero-overly {
+    position: relative;
+    z-index: 0;
+    &::before {
+        position: absolute;
+        content: "";
+        background-color: rgba(10, 17, 25, 0.8);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        background-repeat: no-repeat;
+    }
+}
+
+@keyframes action-bg {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -1080px 0;
+    }
+}
+
+.hero-bg{
+    min-height: 1100px;
+    width: 100%;
+    background-image: url("../images/hero.jpg");
+    color: #ffffff;
+    position: relative;
+    text-align: center;
+    animation: action-bg 30s linear infinite;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    z-index: 1;
+    @media #{$lg}{
+        min-height: 900px;
+        padding-top: 100px;
+    }
+    @media #{$md}{
+        min-height: 900px;
+        padding-top: 100px;
+    }
+    @media #{$xs-to-sm-max}{
+        min-height: 806px;
+        padding-top: 50px;
+    }
+}
+
+// Main Slider
+.sliderArea{
+    // Slider Caption
+    .slider-content {
+        overflow: hidden;
+        &.slider-content{
+            .title{
+                color: var(--white);
+                font-size: 55px;
+                font-weight: 700;
+                line-height: 1.2;
+                margin-bottom: 25px;
+                @media #{$sm}{
+                    font-size: 30px;
+                }
+                @media #{$xs}{
+                    font-size: 25px;
+                }
+            }
+            .pera{
+                font-size: 18px;
+                font-weight: 500;
+                color: var(--white);
+                padding: 0;
+                margin: 0;
+            }
+        }
+        &.slider-content2{
+            .title{
+                color: var(--white);
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 1.2;
+                margin-bottom: 20px;
+                font-family: var(--gabriela);
+                text-transform: capitalize;
+                @media #{$xs}{
+                    font-size: 30px;
+                }
+            }
+            .pera{
+                font-size: 18px;
+                font-weight: 500;
+                color: var(--white);
+                padding: 0;
+                margin: 0;
+                text-transform: capitalize;
+                @media #{$xs}{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+
+// breadcrumb
+.breadcrumb {
+    background: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    margin-bottom: 5px;
+    a {
+        color: var(--primary-title);
+        font-size: 18px;
+        text-transform: capitalize;
+        line-height: 1;
+        font-weight: 400;
+    }
+    .breadcrumb-item{
+        line-height: 1;
+    }
+    .breadcrumb-item + .breadcrumb-item{
+        &::before {
+            display: inline-block;
+            color: var(--primary-title);
+            content: "\e649";
+            font-family: 'themify';
+            font-size: 16px;
+            padding: 0 0px;
+            margin: 0 13px;
+            font-weight: 600;
+            position: relative;
+            top: 3px;
+            padding-right: 10px;
+        }
+    }    
+}
+
+
+.tags {
+    span {
+        background-color: var(--white);
+        color: var(--primary-title);
+        display: inline-block;
+        margin: 0 5px 10px 0;
+        padding: 5px 15px;
+        border-radius: 30px;
+        font-size: 14px;
+        transition: 0.3s;
+        @media #{$xs}{
+            margin: 0 3px 5px 0;
+            padding: 3px 9px;
+            font-size: 13px;
+        }
+    }
+}
+

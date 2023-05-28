@@ -1,0 +1,25 @@
+/*-----------------------------------------------------------------------------------
+
+    :: @version        : 1.0.0
+    :: Template Name   : initBill - HTML product card, table, pricing card, services card, blog card, team multipurpose Showcase card.
+    :: Template author : https://themeforest.net/user/inittheme
+
+-----------------------------------------------------------------------------------*/
+
+// Global SCSS                          // Demo Default
+    @import "global/mixins";            
+    @import "global/variables";         @import "pages/feature";
+    @import "global/global";            @import "pages/demo";
+    @import "global/button";           
+    @import "global/animation";         
+
+// layout                            // Documentation
+    @import "layout/header";         @import "pages/doc";
+    @import "layout/footer";         @import "layout/sidebar";
+    @import "layout/hero";
+
+    
+// Pages -  invoice
+    @import "pages/custom-bootstrap";
+    @import "pages/invoice";
+    @import "pages/receipt";

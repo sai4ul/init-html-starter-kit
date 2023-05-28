@@ -1,0 +1,22 @@
+footer{
+    .copyright{
+        padding: 20px 5px;
+        a{
+            font-weight: 600;
+        }
+        p{
+            font-size: 14px;       
+            font-weight: 500;     
+            color: var(--white);
+            text-transform: capitalize;
+        } 
+    }
+}
+
+.footer-content{
+    @media #{$xs}{
+        .title {
+            font-size: 34px !important;
+        }
+    }
+}

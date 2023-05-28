@@ -1,0 +1,82 @@
+// single-cat
+
+.demo-features{
+    .single-cat{
+        transition: .4s;
+        padding: 28px 25px 23px 25px;
+        position: relative;
+        z-index: 1;
+        border-radius: 8px;
+        box-shadow: 0 0 30px rgba(3,6,150,0.05);
+        cursor: pointer;
+        // &::before {
+        //     position: absolute;
+        //     content: "";
+        //     width: 100%;
+        //     height: 0;
+        //     background:#fdfdfd;
+        //     transition: .6s;
+        //     bottom: 0;
+        //     left: 0;
+        //     z-index: -1;
+        //     border-radius: 5px;
+        // }
+        .cat-icon{
+            margin: auto;
+            max-width: 50px;
+            max-height: 50px;
+            margin-bottom: 13px;
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        .cat-cap{
+            .title{
+                @include transition(.2s);
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 7px;
+                display: block;
+                line-height: 1.5;
+                text-decoration: underline transparent;
+                color: var(--primary-title);
+                @media #{$sm}{
+                    font-size: 21px;
+                }
+                @media #{$xs}{
+                    font-size: 21px;
+                }
+            }
+            .pera{
+                font-size: 14px;
+                @include transition(.2s);
+                margin: 0;
+            }
+            .browse-btn2{
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+
+        // Hover Effect In single 
+        &:hover{
+            transform: translateY(-3px);
+            transition: 0.3s;
+            // -webkit-box-shadow: 0 10px 10px rgba(35,47,85,0.1);
+            // &::before {
+            //     height: 100%;
+            // }
+            .cat-cap{
+                .title{
+                        color: var(--primary-title);
+                }
+                .browse-btn2{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

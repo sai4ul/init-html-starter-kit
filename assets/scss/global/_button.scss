@@ -1,0 +1,184 @@
+
+//Btn multiple style
+
+// Fill button
+@each $btn-name, $btn-color in 
+	(primary, var(--primary-btn)),
+	(secondary, var(--secondary-btn)) ,
+	(tertiary, var(--tertiary-btn)) ,
+	(light, $light-gray),
+	(dark, var(--dark)),
+	(warning, var(--warning)) {
+		.btn-#{$btn-name}-fill{
+
+			padding: 10px 25px;
+			color: #fff;
+			text-transform: capitalize;
+			border: 1px solid transparent;
+			font-size: 16px;
+			font-weight: 500;
+			border-radius: 6px;
+			text-align: center;
+			cursor: pointer;
+			display: inline-block;
+			overflow: hidden;
+			transition: .3s;
+			@if($btn-name == primary){
+				background: var(--primary-btn);
+			}
+			@if($btn-name == secondary){
+				background: var(--secondary-btn);
+			}
+			@if($btn-name == tertiary){
+				background: var(--tertiary-btn);
+			}
+
+			&:hover{
+				background: none;
+				@if($btn-name == primary){
+					border: 1px solid var(--primary-btn);
+					color: var(--primary-btn);
+				}
+				@if($btn-name == secondary){
+					border: 1px solid var(--secondary-btn);
+					color: var(--secondary-btn);
+				}
+				@if($btn-name == tertiary){
+					border: 1px solid var(--tertiary-btn);
+					color: var(--tertiary-btn);
+				}
+				@else{
+					// border: 1px solid var(--primary-btn);
+				}
+				
+				i {
+					left: 3px;
+				}
+			}
+			i {
+				font-size: 18px;
+				@include transition(.3s);
+				position: relative;
+				left: 0;
+				line-height: 1;
+				top: 4px;
+			}
+
+			@if($btn-name == light){
+				color: var(--dark);
+			}
+			@else{
+				// color:var(--white);
+			}
+			&:focus{
+				border-color: $btn-color;
+				background: $btn-color;
+				@if($btn-name == light){
+					color: var(--dark);
+				}
+				@else{
+					color: #fff !important;
+				}
+				&:active{
+					border-color: $btn-color;
+					background: $btn-color;
+					@if($btn-name == light){
+						color: var(--dark);
+					}
+					@else{
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+
+// outline button
+@each $btn-name, $btn-color in 
+	(primary, var(--primary-btn)),
+	(secondary, var(--secondary-btn)) ,
+	(tertiary, var(--tertiary-btn)) ,
+	(light, $light-gray),
+	(dark, var(--dark)),
+	(warning, var(--warning)) {
+		.btn-#{$btn-name}-outline{
+
+			padding: 10px 25px;
+			border: 1px solid transparent;
+			font-size: 16px;
+			font-weight: 500;
+			text-transform: capitalize;
+			border-radius: 6px;
+			text-align: center;
+			cursor: pointer;
+			display: inline-block;
+			overflow: hidden;
+			background: none;
+
+			@if($btn-name == primary){
+				color: var(--primary-btn);
+				border: 1px solid var(--primary-btn);
+			}
+			@if($btn-name == secondary){
+				color:var(--secondary-btn);
+				border: 1px solid var(--secondary-btn);
+			}
+			@if($btn-name == tertiary){
+				color:var(--tertiary-btn);
+				border: 1px solid var(--tertiary-btn);
+			}
+
+			&:hover{
+				color:var(--white);
+				@if($btn-name == primary){
+					border: 1px solid var(--primary-btn);
+					background: var(--primary-btn);
+				}
+				@if($btn-name == secondary){
+					border: 1px solid var(--secondary-btn);
+					background: var(--secondary-btn);
+				}
+				@if($btn-name == tertiary){
+					border: 1px solid var(--tertiary-btn);
+					background: var(--secondary-btn);
+				}
+				@else{
+					// border: 1px solid var(--primary-btn);
+				}
+			}
+			i {
+				font-size: 21px;
+				line-height: 1;
+				position: relative;
+				top: 4px;
+			}
+
+			@if($btn-name == light){
+				color:var(--dark);
+			}
+			@else{
+				// color:var(--white);
+			}
+			&:focus{
+				border-color:$btn-color;
+				background:$btn-color;
+				@if($btn-name == light){
+					color:var(--dark);
+				}
+				@else{
+					color:var(--white);
+				}
+				&:active{
+					border-color:$btn-color;
+					background:$btn-color;
+					@if($btn-name == light){
+						color:var(--dark);
+					}
+					@else{
+						color:var(--white);
+					}
+				}
+			}
+		}
+	}
+
