@@ -2,7 +2,7 @@
 
 Starter Kit for Static Websites
 
-Live : https://sai4ul.github.io/init-html-starter-kit/
+Live : <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank">Demo Live</a>
 
 🚀 Features
 - Compatible with All Static Site like Bootstrap Template
