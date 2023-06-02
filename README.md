@@ -2,6 +2,7 @@
 
 Starter Kit for Static Websites
 
+Live : <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank">Demo Live</a>
 
 🚀 Features
 - Compatible with All Static Site like Bootstrap Template
@@ -41,5 +42,5 @@ Starter Kit for Static Websites
 
 Creator 😄
 
-Its saiful islam, Front-end Developer.
+Its <a href="https://sai4ul.com" target="_blank"> saiful islame</a>, Front-end Developer.
 Dhaka , Bangladesh
