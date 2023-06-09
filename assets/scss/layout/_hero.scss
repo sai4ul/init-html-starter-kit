@@ -1,5 +1,5 @@
 .slider-height{
-    min-height: 400px;
+    min-height: 800px;
     background-position: center center;
     background-size: cover;
     @media #{$md}{
@@ -90,7 +90,7 @@
         overflow: hidden;
         &.slider-content{
             .title{
-                color: var(--white);
+                // color: var(--white);
                 font-size: 55px;
                 font-weight: 700;
                 line-height: 1.2;
@@ -105,14 +105,14 @@
             .pera{
                 font-size: 18px;
                 font-weight: 500;
-                color: var(--white);
+                // color: var(--white);
                 padding: 0;
                 margin: 0;
             }
         }
         &.slider-content2{
             .title{
-                color: var(--white);
+                // color: var(--white);
                 font-size: 40px;
                 font-weight: 700;
                 line-height: 1.2;
@@ -126,7 +126,7 @@
             .pera{
                 font-size: 18px;
                 font-weight: 500;
-                color: var(--white);
+                // color: var(--white);
                 padding: 0;
                 margin: 0;
                 text-transform: capitalize;
@@ -176,14 +176,13 @@
 
 .tags {
     span {
-        background-color: var(--white);
-        color: var(--primary-title);
+        color: #38475a;
         display: inline-block;
         margin: 0 5px 10px 0;
         padding: 5px 15px;
         border-radius: 30px;
         font-size: 14px;
-        transition: 0.3s;
+        border: 1px solid #e1e1e1;
         @media #{$xs}{
             margin: 0 3px 5px 0;
             padding: 3px 9px;
