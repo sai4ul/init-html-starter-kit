@@ -4,15 +4,25 @@ Starter Kit for Static Websites
 
 Live : <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank">Demo Live</a>
 
-🚀 Features
+⚡ Features
 - Compatible with All Static Site like Bootstrap Template
 - Out of the box Uglifying/ Minifying of CSS, HTML, JS
 - SCSS Support
 - ES6+ Support
 - Runs on a local server
 - Support all browsers
-
+- w3 validation
+- 10+ Product Cards
+- 10+ Pricing Cards
+- 10+ Blog Cards 
+- 10+ Team Cards
+- 10+ Services Cards
+- 10+ Table Style
 ##
+
+
+⚡ How to use 
+
 
 🚀 Description
 <table>
