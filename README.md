@@ -41,26 +41,26 @@ Live : <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank"
 
 ##
 
-🚀 Defendance
+🚀 Defendance -Library/Framework/Plugin
 
 <table>
   <thead align="center">
     <tr border: none;>
       <td><b>Name</b></td>
-      <td><b>version</b></td>
-      <td><b>last updated</b></td>
+      <td><b>Version</b></td>
+      <td><b>Last updated</b></td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://getbootstrap.com" target="_blank">bootstrap-5.0.2</a></td>
+      <td><a href="https://getbootstrap.com" target="_blank">Bootstrap-5.0.2</a></td>
       <td>Bootstrap is a free and open-source CSS framework</td>
       <td>2023</td>
     </tr>
     <tr>
       <td><a href="https://jquery.com/download" target="_blank">jquery-3.7.0</a></td>
       <td>jQuery is a JavaScript library</td>
-      <td> 11May - 2023</td>
+      <td> 2023</td>
     </tr>
     <tr>
       <td><a href="https://fontawesome.com" target="_blank">Font-awesome-6.3.0</a></td>
@@ -73,7 +73,7 @@ Live : <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank"
       <td> 2023</td>
     </tr>
     <tr>
-      <td><a href="https://flagicons.lipis.dev" target="_blank">flagicons-6.6.6</a></td>
+      <td><a href="https://flagicons.lipis.dev" target="_blank">Flagicons-6.6.6</a></td>
       <td>Collection of all country flags in SVG</td>
       <td> 2023</td>
     </tr>
