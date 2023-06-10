@@ -3,7 +3,7 @@
 Starter Kit for Static Websites.A simple starter kit for Static SCSS support. Evato - `Themeforest - Codeanyon & colorLib ` These marketplaces have over 1000's of approved template web applications using this HTML starter kit so you can undoubtedly use. 
 <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank">Demo Live</a>
 
-⚡ Features
+### ⚡ Features
 
 - SCSS Support
 - Support all Browsers
@@ -16,8 +16,7 @@ Starter Kit for Static Websites.A simple starter kit for Static SCSS support. Ev
 - 10+ Table Style
 ##
 
-
-🛠 How to use 
+### 🛠 How to use 
 
 > No need any `command`. Index.html can start your design and you will be provided with an html file called `home-page.html` from here you can use components and sections and many free card designs that you can easily design with.
 
@@ -33,7 +32,7 @@ If you need to write any javascript and query code then you write it in a file n
 
 ##
 
-🚀 Defendance - Library / Framework / Plugin
+### 🚀 Defendance - Library / Framework / Plugin
 
 <table>
   <thead align="center">
@@ -98,8 +97,7 @@ If you need to write any javascript and query code then you write it in a file n
   </tbody>
 </table>
 
-
-Creator 😄
+### Creator 😄
 
 Its <a href="https://sai4ul.com" target="_blank"> saiful islame</a>, Front-end Developer.
 Dhaka , Bangladesh
