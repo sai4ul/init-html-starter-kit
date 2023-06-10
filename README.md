@@ -23,7 +23,7 @@ Live : <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank"
 > No need any `command`. Index.html can start your design and you will be provided with an html file called `home-page.html` from here you can use components and sections and many free card designs that you can easily design with.
 
 > SASS - 
- Find a folder named scss which contains some theme default SCSS files which will be in default form with the theme. If you create an SCSS files, just call the`main-style.scss` .If you use SASS then you need to use `Compiler` as far as I know you just need to add the folder. <a href="https://prepros.io/">Prepros</a> ,  <a href="https://scout-app.io/">scout-app</a>
+ Find a folder named scss which contains some theme default SCSS files which will be in default form with the theme. If you create an SCSS files, just call the`main-style.scss` .If you use SASS then you need to use `Compiler` as far as I know you just need to add the folder.Download - <a href="https://prepros.io/">Prepros</a> ,  <a href="https://scout-app.io/">scout-app</a>
 
 > CSS - 
 If you don't want to use SASS, you can write your CSS code at `main-style.css`.If you don't use SASS then you can delete the sass folder.
