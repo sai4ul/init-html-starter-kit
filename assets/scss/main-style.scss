@@ -7,16 +7,19 @@
 -----------------------------------------------------------------------------------*/
 
 
-// Global SCSS                          // Demo Default
+// Global SCSS                     
     @import "global/mixins";            
-    @import "global/variables";         @import "pages/feature";
-    @import "global/global";            @import "pages/demo";
+    @import "global/variables";         
+    @import "global/global";           
     @import "global/button";           
-    @import "global/animation";         
+    @import "global/animation"; 
+    
+// Documentation        
+    @import "pages/doc";
 
-// layout                            // Documentation
-    @import "layout/header";         @import "pages/doc";
-    @import "layout/footer";         @import "layout/sidebar";
+// layout                            
+    @import "layout/header";        
+    @import "layout/footer";        
     @import "layout/hero";
 
     
