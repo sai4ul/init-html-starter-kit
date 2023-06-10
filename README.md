@@ -8,7 +8,7 @@ Starter Kit for Static Websites.A simple starter kit for Static SCSS support. Ev
 - SCSS Support
 - Support all Browsers
 - w3 validation
-- 10+ Product Cards
+- 10+ Product Cards <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank">Live</a>
 - 10+ Pricing Cards
 - 10+ Blog Cards 
 - 10+ Team Cards
