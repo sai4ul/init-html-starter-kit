@@ -950,11 +950,4 @@
     
 }
 
-.flexContent{
-    @include flexbox();
-    @include justify-content(space-between);
-    @include align-items(center);
-    @include flex-wrap(wrap);
-  }
-
 

@@ -6,20 +6,6 @@
 
 -----------------------------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Gabriela&family=Inter:wght@300;400;500;600;700;800&display=swap");
-.flexContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
 :root {
   --white: #fff;
   --light: #d8dbe0;
