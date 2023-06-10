@@ -69,7 +69,7 @@ If you need to write any javascript and query code then you write it in a file n
       <td align="center"> 2023</td>
     </tr>
     <tr>
-      <td><a href="https://flagicons.lipis.dev" target="_blank">Flagicons</a></td>
+      <td><a href="https://flagicons.lipis.dev" target="_blank">Flag-icons</a></td>
       <td>6.6.6</td>
       <td>Collection of all country flags in SVG</td>
       <td align="center"> 2023</td>
