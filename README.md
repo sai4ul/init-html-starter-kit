@@ -20,7 +20,7 @@ Live : <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank"
 
 ⚡ How to use 
 
-> No need any `command`. You need to put at the `src` (`src/index.html`) folder level.
+> No need any `command`. Index.html can start your design and you will be provided with an html file called home page from here you can use components and sections and many free card designs that you can easily design with..
 
 
 
