@@ -27,6 +27,7 @@ Live : <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank"
 
 > CSS - 
 If you don't want to use SASS, you can write your CSS code at `main-style.css`.If you don't use SASS then you can delete the sass folder.
+<img src="https://prnt.sc/OG13RbNfe6nh" alt="init-starter-kit">
 
 > js/jQuery
 If you need to write any javascript and query code then you write it in a file named `main.js`
