@@ -20,6 +20,9 @@ Live : <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank"
 
 ⚡ How to use 
 
+> No need any `command`. You need to put at the `src` (`src/index.html`) folder level.
+
+
 
 🚀 Description
 <table>
