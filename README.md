@@ -41,7 +41,7 @@ Live : <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank"
 
 ##
 
-🚀 Defendance - Library / Framework / Plugin
+⚡ Defendance - Library / Framework / Plugin
 
 <table>
   <thead align="center">
@@ -63,7 +63,7 @@ Live : <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank"
       <td><a href="https://jquery.com/download" target="_blank">jquery</a></td>
       <td>3.7.0</td>
       <td>jQuery is a JavaScript library</td>
-      <td> 2023</td>
+      <td align="center"> 2023</td>
     </tr>
     <tr>
       <td><a href="https://fontawesome.com" target="_blank">Font-awesome</a></td>
@@ -75,7 +75,7 @@ Live : <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank"
       <td><a href="https://fontawesome.com" target="_blank">Line-awesome</a></td>
       <td>5.11.2</td>
       <td>Font and icon library alternative to Font Awesome.</td>
-      <td> 2023</td>
+      <td align="center"> 2023</td>
     </tr>
     <tr>
       <td><a href="https://flagicons.lipis.dev" target="_blank">Flagicons</a></td>
