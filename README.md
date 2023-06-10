@@ -14,6 +14,7 @@ Live : <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank"
 
 ##
 
+🚀 Description
 <table>
   <thead align="center">
     <tr border: none;>
@@ -39,6 +40,33 @@ Live : <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank"
 </table>
 
 ##
+
+🚀 defendance
+
+<table>
+  <thead align="center">
+    <tr border: none;>
+      <td><b>Name</b></td>
+      <td><b>version</b></td>
+      <td><b>last updated</b></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#" target="_blank">bootstrap-5.0.2</a></td>
+      <td>Bootstrap is a free and open-source CSS framework</td>
+      <td>2023</td>
+    </tr>
+    <tr>
+      <td><a href="#" target="_blank">jquery-3.7.0.min.js</a></td>
+      <td>jQuery is a JavaScript library. purpose of jQuery is to make it much easier to use JavaScript on your website</td>
+      <td> 11May - 2023</td>
+    </tr>
+
+    
+  </tbody>
+</table>
+
 
 Creator 😄
 
