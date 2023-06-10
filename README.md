@@ -41,7 +41,7 @@ Live : <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank"
 
 ##
 
-🚀 defendance
+🚀 Defendance
 
 <table>
   <thead align="center">
@@ -59,7 +59,7 @@ Live : <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank"
     </tr>
     <tr>
       <td><a href="#" target="_blank">jquery-3.7.0.min.js</a></td>
-      <td>jQuery is a JavaScript library. purpose of jQuery is to make it much easier to use JavaScript on your website</td>
+      <td>jQuery is a JavaScript library</td>
       <td> 11May - 2023</td>
     </tr>
 
