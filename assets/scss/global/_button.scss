@@ -1,7 +1,7 @@
 
 //Btn multiple style
 
-// Fill button
+// Fill button - btn-primary-fill
 @each $btn-name, $btn-color in 
 	(primary, var(--primary-btn)),
 	(secondary, var(--secondary-btn)) ,
