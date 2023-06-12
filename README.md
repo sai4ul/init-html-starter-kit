@@ -1,6 +1,6 @@
 # HTML Starter Kit
 
-Starter Kit for Static Websites. A simple starter kit for Static SCSS support. Evato - `Themeforest - Codeanyon & colorLib ` These marketplaces have over 1000's of approved template web applications using this HTML starter kit so you can undoubtedly use. 
+Starter Kit for Static Websites. A simple starter kit. SCSS support. Evato - `Themeforest - Codeanyon & colorLib ` These marketplaces have over 1000's of approved template web applications using this HTML starter kit so you can undoubtedly use. 
 <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank">Demo Live</a>
 
 ### ⚡ Features
@@ -9,11 +9,11 @@ Starter Kit for Static Websites. A simple starter kit for Static SCSS support. E
 - Support all Browsers
 - w3 validation
 - 10+ Product Cards <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank">Live</a>
-- 10+ Pricing Cards
-- 10+ Blog Cards 
-- 10+ Team Cards
-- 10+ Services Cards
-- 10+ Table Style
+- 10+ Pricing Cards <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank">Live</a>
+- 10+ Blog Cards <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank">Live</a>
+- 10+ Team Cards <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank">Live</a>
+- 10+ Services Cards <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank">Live</a>
+- 10+ Table Style <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank">Live</a>
 ##
 
 ### 🛠 How to use 
