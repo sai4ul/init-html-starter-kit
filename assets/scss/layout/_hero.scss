@@ -16,17 +16,17 @@
     }
 }
 .slider-height2{
-    min-height: 250px;
+    min-height: 200px;
     background-position: center center;
     background-size: cover;
     @media #{$md}{
-        min-height: 250px;
+        min-height: 200px;
     }
     @media #{$sm}{
-        min-height: 250px;
+        min-height: 200px;
     }
     @media #{$xs}{
-        min-height: 250px;
+        min-height: 200px;
     }
 }
 

@@ -1,6 +1,6 @@
 # HTML Starter Kit
 
-Starter Kit for Static Websites. A simple starter kit. SCSS support. Evato - `Themeforest - Codeanyon & colorLib ` These marketplaces have over 1000's of approved template web applications using this HTML starter kit so you can undoubtedly use. 
+Starter Kit for Static Websites. SCSS support. Evato - `Themeforest - Codeanyon & colorLib ` These marketplaces have over 1000's of approved template web applications using this HTML starter kit so you can undoubtedly use. 
 <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank">Demo Live</a>
 
 ### ⚡ Features
