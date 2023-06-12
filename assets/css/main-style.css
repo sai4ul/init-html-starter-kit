@@ -17966,6 +17966,18 @@ footer .copyright p {
 ------------------------------------------------
     End-of Team
 ------------------------------------------------*/
+.buttons-cards {
+  position: fixed;
+  left: 30px;
+}
+
+.buttons-cards {
+  position: fixed;
+  left: 30px;
+  width: 200px;
+  z-index: 999;
+}
+
 .team-style-one .single-team .team-img {
   position: relative;
   overflow: hidden;

@@ -23,6 +23,17 @@
     End-of Team
 ------------------------------------------------*/
 
+.buttons-cards{
+    position: fixed;
+    left: 30px;
+}
+.buttons-cards {
+	position: fixed;
+	left: 30px;
+	width: 200px;
+    z-index: 999;
+}
+
 
 // 1. Team style one 
 .team-style-one{
