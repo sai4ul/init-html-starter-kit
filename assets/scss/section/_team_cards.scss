@@ -1257,7 +1257,7 @@
 .team-twenty-five{
     .single-team{
        
-        background: var(--white);
+        background: var(--primary);
         padding: 41px 35px 14px 42px;
         transition: .4s;
         border-radius: 6px;
@@ -1272,6 +1272,7 @@
                 line-height: 1.5;
                 font-size: 14px;
                 font-weight: 400;
+                color:var(--white);
                 @media #{$sm}{
                     margin-bottom: 30px;
                 }
@@ -1282,7 +1283,7 @@
             }
             .social{
                 a{
-                    color: rgba(56, 71, 90, 0.7098039216);
+                    color:var(--white);
                     font-size: 22px;
                     line-height: 33px;
                     text-align: center;
@@ -1324,7 +1325,7 @@
         .team-title{
             margin-bottom: 10px;
             .title{
-                color: var(--primary-title);
+                color:var(--white);
                 font-size: 20px;
                 text-align: left;
                 margin-bottom: 1px;
@@ -1333,6 +1334,7 @@
                 }
             }
             .pera{
+                color:var(--white);
                 font-weight:500;
                 line-height:1.5;
                 margin: 0;
@@ -1361,244 +1363,7 @@
     }
 }
 
-// 26. Team  twenty-Six
-.team-twenty-six{
-    .single-team{
-        .team-img {
-            position: relative;
-            img {
-                width: 100%;
-            }
-        }
-        .team-caption {
-            height: 85px;
-            transition: .4s;
-            position: absolute;
 
-            bottom: -24px;
-            background: var(--white);
-            padding-top: 20px;
-            padding-bottom: 0;
-            left: 25px;
-            right: 25px;
-            text-align: center;
-            margin: 0 auto;
-            overflow: hidden;
-            border-radius: 4px;
-            @media #{$lg}{
-                width: 90%;
-            }
-            @media #{$md}{
-                width: 90%;
-            }
-            @media #{$sm}{
-                width: 90%;
-            }
-            .cap {
-                transition: .4s;
-                margin-bottom: 30px;
-            }
-
-            .title{
-                color: var(--primary-title);
-                font-weight: 600;
-                font-size: 20px;
-                display: block;
-                margin-bottom: 6px;
-                line-height: 13px;
-                @media #{$md}{
-                    font-size: 18px;
-                    margin-bottom: 6px;
-                }
-                @media #{$md}{
-                    font-size: 18px;
-                    margin-bottom: 6px;
-                }
-                @media #{$sm}{
-                    font-size: 18px;
-                    margin-bottom: 6px;
-                }
-                &:hover{
-                    color: var(--primary);
-                }
-            }
-            .pera{
-                font-size: 15px;
-                margin: 0;
-                padding: 0;
-            }
-        }
-        // Hover
-       &:hover {
-        .team-img {
-            .cap {
-                margin-top: -65px;
-            }
-           }
-       }
-        .team-social{
-            // position: absolute;
-            bottom: 22px;
-            left: 0;
-            right: 0;
-            text-align: center;
-            .single-list{
-                display: inline-block;
-                a {
-                    background: var(--primary);
-                    transition: .4s;
-                    color: var(--white);
-
-                    font-size: 16px;
-                    margin: 0 3px;
-                    display: inline-block;
-                    width: 38px;
-                    height: 35px;
-                    text-align: center;
-                    line-height: 35px;
-                    transform: translateY(0px);
-                    opacity: 1;
-                    visibility: visible;
-                    border-radius: 4px;
-
-                    i {
-                        display: inline-block;
-                    }
-
-                    // Effect
-                    transform: translateY(0px);
-                    opacity: 1;
-                    visibility: visible;
-
-                }
-                &:nth-child(1) a{
-                    transition-delay: 0.0s;
-                }
-                &:nth-child(2) a{
-                    transition-delay: 0.1s;
-                }
-                &:nth-child(3) a{
-                    transition-delay: 0.2s;
-                }
-                &:nth-child(4) a{
-                    transition-delay: 0.3s;
-                }
-            }
-        }
-    }
-}
-
-// 26. Team  twenty-Seven 
-.team-twenty-seven{
-    .single-team{
-        .team-img {
-            overflow: hidden;
-            position: relative;
-            img {
-                width: 100%;
-                @include transition(.6s);
-                transform: scale(1);
-
-                position: relative;
-                z-index: 1;
-
-            }
-        }
-        .team-caption {
-            background: var(--section-bg-three);
-            padding: 18px 0;
-            text-align: center;
-            .title{
-                color: var(--primary-title);
-                font-weight: 600;
-                font-size: 20px;
-                margin-bottom: 3px;
-                display: block;
-                @media #{$md}{
-                    font-size: 18px;
-                }
-                &:hover{
-                    color: var(--primary);
-                }
-            }
-            .pera{
-                font-size: 14px;
-                color:var(--primary-title);
-                padding-bottom: 0px;
-            }
-        }
-        // Hover
-       &:hover {
-            .team-img {
-                &::before{
-                    opacity: 1;
-                    visibility: visible;
-                }
-                img {
-                    transform: scale(1.06);
-                }
-                // Effect
-                .team-social{
-                    a{
-                        transform: translateX(0px);
-                        opacity: 1;
-                        visibility: visible;
-
-                    }
-                }
-            }
-       }
-
-       .team-social{
-        position: absolute;
-        top: 50%;
-        left: 18px;
-        z-index: 5;
-        transform: translateY(-50%);
-        .single-list{
-            display: block;
-            margin-bottom: 10px;
-            a {
-                background: var(--white);
-                transition: .4s;
-                color: var(--primary);
-                width: 35px;
-                height: 35px;
-                font-size: 16px;
-                line-height: 34px;
-                text-align: center;
-                margin-left: 8px;
-                display: inline-block;
-                border-radius: 4px;
-                i {
-                    display: inline-block;
-                }
-    
-                // Effect
-                transform: translateX(-40px);
-                opacity: 0;
-                visibility: hidden;
-                &:hover{
-                    color: var(--white);
-                    background: var(--primary);
-                }
-            }
-            &:nth-child(1) a{
-                transition-delay: 0.0s;
-            }
-            &:nth-child(2) a{
-                transition-delay: 0.1s;
-            }
-            &:nth-child(3) a{
-                transition-delay: 0.2s;
-            }
-            &:nth-child(4) a{
-                transition-delay: 0.3s;
-            }
-        }
-        }
-    }
-}
 
 // 28. Team  twenty-Eight
 .team-twenty-eight{
