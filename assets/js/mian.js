@@ -2,9 +2,9 @@
     Index Of Script
 ------------------------------------------------
 
-    @version  :	
-    @author   : 
-    @url 	  : 
+    @version  :	1.0.0
+    @author   : SAIFUL ISLAM
+    @url 	  : https://github.com/sai4ul/init-html-starter-kit
     
                     
     :: Data-background               
