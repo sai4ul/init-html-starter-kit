@@ -3,7 +3,7 @@
 ------------------------------------------------
 
     @version  :	1.0.0
-    @author   : SAIFUL ISLAM
+    @author   : sai4ul
     @url 	  : https://github.com/sai4ul/init-html-starter-kit
     
                     

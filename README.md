@@ -98,5 +98,5 @@ If you need to write any javascript and query code then you write it in a file n
 
 ### Creator 😄
 
-Its <a href="https://sai4ul.com" target="_blank"> saiful islame</a>, Front-end Developer.
+Its <a href="https://sai4ul.com" target="_blank"> sai4ule</a>, Front-end Developer.
 Dhaka , Bangladesh
