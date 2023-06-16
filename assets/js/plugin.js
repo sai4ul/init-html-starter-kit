@@ -3,9 +3,9 @@
     Index Of All Plugin Hera
 ------------------------------------------------
 
-    @version  :	
-    @author   : 
-    @url 	  : 
+    @version  :	1.0.0
+    @author   : sai4ul
+    @url 	  : https://github.com/sai4ul/init-html-starter-kit
 
     :: WOW
     :: Slick-Nav
