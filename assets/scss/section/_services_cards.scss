@@ -23,1218 +23,8 @@
 ------------------------------------------------*/
 
 
-// 1. Services style one 
-.services-style-one{
-
-    // Border-top
-    .col-lg-6:nth-child(1) .single-services,
-    .col-lg-6:nth-child(2) .single-services  {
-        border-top: 0px;
-
-    }
-
-    // remove border left
-    .col-lg-6:nth-child(1) .single-services,
-    .col-lg-6:nth-child(3) .single-services  {
-        border-left: 0;
-        
-    }
-
-    // remove border left
-    .col-lg-6:nth-child(3) .single-services,
-    .col-lg-6:nth-child(4) .single-services  {
-        border-bottom: 0px;
-    }
-    
-    .single-services{
-        border-left: 1px solid #EFEFEF;
-        border-bottom: 1px solid #EFEFEF;
-        @media #{$xs}{
-            border: 0;
-        }
-        padding: 44px 36px;
-        @media #{$xs}{
-			padding: 40px 19px;
-        }
-        @media #{$sm}{
-			padding: 40px 19px;
-        }
-        @media #{$md}{
-			padding: 56px 32px;
-        }
-        @media #{$lg}{
-			padding: 46px 23px;
-        }
-        transition: .4s;
-        &:hover {
-            box-shadow: 0px 15px 25px rgba(168,96,0,0.1);
-        }
-        .services-ion{
-            margin-bottom: 31px;
-        }
-        .services-cap{
-            .title{
-                font-size: 24px;
-                line-height: 1.4;
-                margin-bottom: 12px;
-                font-weight: 600;
-                display: block;
-                color:var(--primary-title) !important;
-                &:hover{
-                    color: var(--primary);
-                }
-                @media #{$sm}{
-                    font-size: 20px;
-                }
-            }
-            .pera{
-                margin-bottom: 24px;
-            }
-            a.more-btn{
-                color: var(--primary);
-                font-size: 18px;
-                &:hover{
-                    letter-spacing: 1px;
-                }
-            }
-        }
-    }
-}
-
-// 2. Services style Two
-.services-style-two {
-    .single-cat{
-        border: 1px solid #ddd;
-        padding: 52px 50px;
-        transition: .4s;
-        z-index: 1;
-        border-radius: 10px;
-        @media #{$lg}{
-            padding: 36px 29px;
-        }
-        @media #{$xs}{
-            padding: 30px 22px;
-        }
-        @media #{$sm}{
-            padding: 30px 18px;
-        }
-        // icon
-        .cat-icon{
-            img{
-                margin-bottom: 31px;
-            }
-        }
-        .cat-cap{
-            .title{
-                color: var(--primary-title);
-                @include transition(.2s);
-                font-size: 22px;
-                margin-bottom: 14px;
-                display: block;
-                @media #{$xs}{
-                    font-size: 18px;
-                }
-            }
-            .pera{
-                @include transition(.2s);
-                font-size: 16px;
-                margin-bottom: 34px;
-                @media #{$sm}{
-                    font-size: 15px;
-
-                }
-            }
-            .browse-btn{
-                color: var(--primary-title);
-                @include transition(.2s);
-                text-transform: capitalize;
-                font-size: 16px;
-                &:Hover{
-                    color: var(--primary);
-                }
-            }
-        }
-        // Hover Effect In single 
-        &:hover{
-            border: 1px solid transparent;
-            box-shadow: 0px 15px 25px rgba(168, 96, 0,.1);
-       }
-    }
-}
-
-// 5. Services style Five 
-.services-style-five {
-    %overlay2{
-        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff4495+0,ff6d6d+100 */
-        background: rgb(255,68,149); /* Old browsers */
-        background: -moz-linear-gradient(top,  rgba(255,68,149,1) 0%, rgba(255,109,109,1) 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top,  rgba(255,68,149,1) 0%,rgba(255,109,109,1) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom,  rgba(255,68,149,1) 0%,rgba(255,109,109,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4495', endColorstr='#ff6d6d',GradientType=0 ); /* IE6-9 */
-      
-       }
-
-    .single-cat{
-        background:#FFF6FA;
-        border-radius: 0px;
-        padding: 40px 21px;
-        transition: .4s;
-        position: relative;
-        z-index: 1;
-
-        &::before {
-            position: absolute;
-            content: "";
-            width: 100%;
-            height: 0;
-            // background:#ff3d1c;
-            @extend %overlay2;
-            transition: .6s;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-            border-radius: 0px;
-        }
-        .cat-icon{
-            color: var(--primary);
-            font-size: 50px;
-            margin-bottom: 30px;
-            display: block;
-            margin-bottom: 50px;
-
-            width: 100px;
-            height: 100px;
-            background:var(--white);
-            line-height: 100px;
-            text-align: center;
-            border-radius: 50px;
-            display: inline-block;
-            box-shadow: 0px 15px 25px rgba(0, 4, 74,.04);
-            img{
-
-            }
-        }
-        .cat-cap{
-            h5{
-             & > a{
-                 color: var(--primary-title);
-                font-size: 26px;
-                font-weight: 400;
-                margin-bottom: 21px;
-                display: block;
-                @include transition(.2s);
-                @media #{$sm}{
-                    font-size: 21px;
-                }
-                @media #{$xs}{
-                    font-size: 21px;
-                }
-              }
-            }
-            .pera{
-                margin-bottom: 36px;
-                color: #3F4854;
-                font-size: 16px;
-                @include transition(.2s);
-                margin: 0;
-                @media #{$sm}{
-                    font-size: 15px;
-
-                }
-            }
-            a{
-                color: #1c165c;
-                font-size: 16px;
-                font-weight: 600;
-                @include transition(.2s);
-            }
-        }
-
-
-        // Hover Effect In single 
-        &:hover{
-            &::before {
-                height: 100%;
-            }
-            .cat-icon{
-            span{
-                background:var(--white);
-            }
-            }
-            .cat-cap{
-                h5{
-                    color: var(--white);
-                }
-                .pera{
-                    color: var(--white);
-                }
-                a{
-                    color: var(--white);
-                }
-            }
-       }
-    }
-}
-
-// 7. Services style Seven
-.services-style-seven{
-    .single-services{
-        .services-img {
-            position: relative;
-            border-radius: 16px;
-            img {
-                width: 100%;
-                border-radius: 16px;
-            }
-        }
-        .services-caption {
-            
-            transition: .4s;
-            position: absolute;
-            bottom: -65px;
-
-            width: 80%;
-            padding-top: 34px;
-            padding-bottom: 25px;
-            padding-left: 29px;
-            padding-right: 15px;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            overflow: hidden;
-            -webkit-box-shadow: 0 10px 20px rgba(2, 60, 90,.1);
-            border-radius: 10px;
-            @media #{$lg}{
-                width: 90%;
-            }
-            @media #{$md}{
-                padding-left: 15px;
-                width: 90%;
-            }
-            @media #{$sm}{
-                width: 90%;
-            }
-            @media #{$xs}{
-                padding-left: 15px;
-                padding-right: 15px;
-            }
-            .title{
-                color:var(--primary-title);
-                font-size: 22px;
-                margin-bottom: 14px;
-                display: block;
-                @media #{$md}{
-                    font-size: 18px;
-                    margin-bottom: 6px;
-                }
-                @media #{$md}{
-                    font-size: 18px;
-                    margin-bottom: 6px;
-                }
-                @media #{$sm}{
-                    font-size: 18px;
-                    margin-bottom: 6px;
-                }
-                &:hover{
-                    color: var(--primary);
-                }
-            }
-            .pera{
-                font-size: 16px;
-                margin: 0;
-                padding: 0;
-                line-height: 1.4;
-            }
-        }
-    }
-} 
-
-// 14. Services style fourteen
-.services-style-fourteen{
-    .single-cat{
-        padding: 40px 21px;
-        transition: .4s;
-        position: relative;
-        z-index: 1;
-        box-shadow: 0 25px 35px rgba(68, 162, 255,.1);
-        -webkit-box-shadow: 0 10px 20px rgba(2,60,90,0.1);
-        &::before {
-            position: absolute;
-            content: "";
-            width: 100%;
-            height: 0;
-            background:#192839;
-            // @extend %overlay2;
-            transition: .6s;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-            border-radius: 5px;
-        }
-        .title{
-            color: var(--primary-title);
-            font-size: 22px;
-            margin-bottom: 21px;
-            display: block;
-            @include transition(.2s);
-            @media #{$sm}{
-                font-size: 21px;
-            }
-            @media #{$xs}{
-                font-size: 21px;
-            }
-        }
-        .cat-icon{
-            color: var(--primary);
-            margin-bottom: 30px;
-            display: block;
-
-            width: 78px;
-            height: 78px;
-            background:#FFE1EE;
-            line-height: 78px;
-            text-align: center;
-            border-radius: 50px;
-            display: inline-block;
-            box-shadow: 0px 15px 25px rgba(0, 4, 74,.04);
-        }
-        .cat-cap{
-            .pera{
-                margin-bottom: 36px;
-                color: var(--primary-title);
-                font-size: 18px;
-                @include transition(.2s);
-                margin: 0;
-                @media #{$sm}{
-                    font-size: 15px;
-                }
-            }
-            .title{
-                color: #1c165c;
-                font-size: 16px;
-                font-weight: 600;
-                @include transition(.2s);
-            }
-        }
-
-
-        // Hover Effect In single 
-        &:hover{
-            &::before {
-                height: 100%;
-            }
-            .cat-icon{
-                span{
-                    background:var(--white);
-                }
-            }
-            .title{
-                color: var(--white);
-            }
-           
-            .cat-cap{
-                .title{
-                    color: var(--white);
-                }
-                .pera{
-                    color: var(--white);
-                }
-            }
-       }
-    }
-}
-
-// 16. Services style sixteen 
-.services-style-sixteen{
-    .single-cat{
-        transition: .4s;
-        background:var(--white);
-        padding: 40px 20px 35px 20px;
-        position: relative;
-        z-index: 1;
-        &::before {
-            position: absolute;
-            content: "";
-            width: 100%;
-            height: 0;
-            background:#F2F4F8;
-            transition: .6s;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-        }
-        .cat-icon{
-            margin-bottom: 25px;
-        }
-        .cat-cap{
-            .title{
-                color: var(--primary-title);
-                @include transition(.2s);
-                font-size: 18px;
-                margin-bottom: 0px;
-                text-decoration: underline transparent;
-                @media #{$large1}{
-                    font-size: 16px;
-                }
-                @media #{$sm}{
-                    font-size: 16px;
-                }
-                @media #{$xs}{
-                    font-size: 16px;
-                }
-                }
-            .pera{
-                margin-bottom: 36px;
-                font-size: 16px;
-                @include transition(.2s);
-                margin: 0;
-                @media #{$sm}{
-                    font-size: 15px;
-                }
-            }
-        }
-        // Hover Effect In single 
-        &:hover{
-            &::before {
-                height: 100%;
-            }
-            .cat-cap{
-                .title{
-                    color: var(--primary);
-                    text-decoration: underline;
-                }
-            }
-       }
-    }
-}
-
-// 18. Services style eighteen 
-.services-style-eighteen{
-    .single-blogs{
-        .blog-img{
-            margin-bottom: 25px;
-            width: 100%;
-            position: relative;
-            border-radius: 6px;
-            overflow: hidden;
-            &::before {
-                @include transition(.3s);
-                position: absolute;
-                content: "";
-                background-color:rgba(84, 84, 84,.6);
-                width: 100%;
-                height: 100%;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                opacity: 0;
-                visibility: hidden;
-                border-radius: 6px;
-            }
-            img{
-                width: 100%;
-                border-radius: 6px;
-            }
-            .blog-btn{
-                color:var(--white);
-                text-transform: capitalize;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                background: var(--primary);
-                padding: 11px 14px;
-                font-size: 16px !important;
-                width: 143px;
-                left: 0;
-                right: 0;
-                margin: 0 auto;
-                text-align: center;
-                opacity: 0;
-                visibility: hidden;
-                display: inline-block;
-                border-radius: 6px;
-            }
-        }
-        .blogs-cap{
-            .title{
-                color: var(--primary-title);
-                font-size: 22px;
-                line-height: 1.4;
-                margin-bottom: 12px;
-                display: block;
-                @media #{$sm}{
-                    font-size: 20px;
-                }
-                &:hover{
-                    color: var(--primary);
-                }
-            }
-            .pera{
-                margin-bottom: 24px;
-                font-size: 18px;
-            }
-        }
-        &:hover{
-            .blog-img{
-                &::before {
-                    opacity: 1;
-                    visibility: visible;
-                }
-            }
-            .blog-btn{
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-    }
-}
-
-// 21. Services style twenty-one 
-.services-twenty-one{
-    .red-btn2 i {
-        border: 1px solid #E8E7D3;
-        color: var(--primary-title);
-        background: none;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: inline-block;
-        line-height: 50px;
-        position: relative;
-        top: 5px;
-        text-align: center;
-    }
-    .services-area{
-        .single-blogs{
-            padding: 60px 40px 60px 40px;
-            transition: .4s;
-            .blog-img{
-                text-align: center;
-                img{
-                    margin-bottom: 25px;
-                }
-                .blog-btn{
-                    color:var(--white);
-                    text-transform: capitalize;
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    background: var(--primary);
-                    padding: 25px 17px;
-                    font-size: 16px !important;
-                    width: 123px;
-                    left: 0;
-                    right: 0;
-                    margin: 0 auto;
-                    text-align: center;
-                    opacity: 0;
-                    visibility: hidden;
-                }
-            }
-            .blogs-cap{
-                span{
-                    margin-bottom: 11px;
-                    display: block;
-                }
-                .title{
-                    color: var(--primary-title);
-                    font-size: 22px;
-                    line-height: 1.4;
-                    margin-bottom: 12px;
-                    @media #{$sm}{
-                        font-size: 20px;
-                    }
-                    
-                    &:hover{
-                        color: var(--primary-title);
-                    }
-                }
-                .pera{
-                    margin-bottom: 24px;
-                    font-size: 16px;
-                }
-            }
-            &:hover{
-                background: #F8F8F8;
-                .blog-img{
-                    &::before {
-                        opacity: 1;
-                        visibility: visible;
-                    }
-                }
-                .blogs-cap{
-                    .red-btn2{
-                        i{
-                            background: var(--primary);
-                            border: 1px solid transparent;
-                            color: var(--white); 
-                        }
-                    }
-                }
-            }
-        }
-    }    
-}
-
-// 22. Services style twenty-Two 
-.services-twenty-two{
-    // Border-top
-    .col-xl-4:nth-child(1) .single-services,
-    .col-xl-4:nth-child(2) .single-services,  
-    .col-xl-4:nth-child(3) .single-services {
-        // border-top: 0px;
-        @media #{$xs}{
-			border-bottom: 1px solid #EFEFEF;
-        }
-    }
-    // remove border left
-    .col-xl-4:nth-child(1) .single-services {
-        border-left: 0;
-    }
-
-    // remove border left
-    .col-xl-4:nth-child(3) .single-services{
-        @media #{$md}{
-            border-right: 1px solid #EFEFEF;
-            border-left: 0;
-        }
-        @media #{$sm}{
-			border-right: 1px solid #EFEFEF;
-			border-left: 0;
-        }
-    }
-    .single-services{
-        transition: .4s;
-        border-left: 1px solid #EFEFEF;
-        border-bottom: 1px solid #EFEFEF;
-        border-top: 1px solid #EFEFEF;
-        padding: 40px 45px 56px 45px;
-        @media #{$lg}{
-            padding: 40px 45px 45px 45px;
-        }
-        @media #{$xs-to-md-max}{
-            padding: 30px 30px 43px 30px;
-            border: 0;
-        }
-        &:hover {
-            box-shadow: 0px 15px 40px rgba(0,61,43,0.1);
-        }
-        .services-cap{
-            .title{
-                font-size: 22px;
-                line-height: 1.4;
-                margin-bottom: 18px;
-                display: block;
-                @media #{$sm}{
-                    font-size: 20px;
-                }
-                @media #{$xs}{
-                    font-size: 18px;
-                }
-                color:var(--primary-title) !important;
-                &:hover{
-                    color: var(--primary);
-                }
-            }
-            .pera{
-                margin-bottom: 24px;
-                font-size: 16px;
-                color: var(--primary-paragraph);
-            }
-            a.more-btn{
-                color: var(--primary);
-                font-size: 18px;
-                font-weight: 400;
-                &:hover{
-                    letter-spacing: 1px;
-                }
-            }
-        }
-        &:hover{
-            .services-ion{
-                span{
-                    color: var(--primary);
-                }
-            }
-        }
-    }
-
-}
-
-// 23. Services style twenty-Three
-.services-twenty-three{
-    // Border-top
-    .col-lg-4:nth-child(1) .properties,
-    .col-lg-4:nth-child(2) .properties,  
-    .col-lg-4:nth-child(3) .properties {
-        border: 1px solid rgba(54, 64, 43,.2);
-        border-bottom: 0;
-        @media #{$xs}{
-            border-bottom: 1px solid rgba(54, 64, 43,.2);
-        }
-    }
-    // remove border left
-    .col-lg-4:nth-child(1) .properties {
-        border-left: 0;
-        border-right: 0;
-        @media #{$sm}{
-            border-left: 1px solid rgba(54, 64, 43,.2)
-        }
-    }
-    // remove border Right
-    .col-lg-4:nth-child(3) .properties {
-        border-left: 0;
-        border-right: 0;
-        @media #{$sm}{
-            border-left: 1px solid rgba(54, 64, 43,.2) !important;
-        }
-    }
-
-    // remove border left
-    .col-lg-4:nth-child(3) .properties{
-        @media #{$md}{
-            border-right: 1px solid rgba(54, 64, 43,.2);
-            border-left: 0;
-        }
-        @media #{$sm}{
-            border-right: 1px solid rgba(54, 64, 43,.2);
-            border-left: 0;
-        }
-    }
-
-    .properties{
-        padding: 30px 30px 30px 30px;
-        &__card{
-            background: none;
-             transition: .4s;
-        }
-        &__img{
-            margin-bottom: 30px;
-            img{
-                width: 100%;
-                position: relative;
-            }
-        }
-        &__caption{
-            .title{
-                font-size: 22px;
-                font-weight: 700;
-                margin-bottom: 15px;
-                transition: .4s;
-                &:Hover{
-                    color: var(--primary-title);
-                }
-            }
-            .pera{
-                color: var(--primary-title);
-                font-size: 16px;
-                margin-bottom: 30px;
-                span{
-                    color:var(--primary);
-                    font-size: 16px;
-                    @media #{$md}{
-                        font-size: 12px;
-                    }
-                }
-            }
-        }
-        &.properties2 {
-            margin: 0px 5px 30px 5px !important;
-        }
-        &:hover{
-            .properties__caption{
-                .title{
-                    color: var(--primary-title);
-                }
-            }
-            .properties__footer{
-                .cmn-btn-outline3{
-                    background-color: var(--primary-title);
-                    border: 1px solid var(--primary-title);
-                    color: var(--white) !important;
-                }
-            }
-        }
-    }
-	
-}
-
-.gallery-area{
-    margin-top: -110px;
-    position: relative;
-    @media #{$lg}{
-        margin-top: 0px;
-    }
-    @media #{$md}{
-        margin-top: 0px;
-    }
-    @media #{$sm}{
-        margin-top: 0px;
-    }
-    @media #{$xs}{
-        margin-top: 0px;
-    }
-    .gallery-wrapper{
-        padding: 30px 30px  0px 30px;
-        background: #fff;
-        @media #{$lg}{
-            padding: 30px 0px  0px 0px;
-        }
-        @media #{$md}{
-            padding: 30px 0px  0px 0px;
-        }
-        @media #{$sm}{
-            padding: 30px 0px  0px 0px;
-        }
-        @media #{$xs}{
-            padding: 30px 0px  0px 0px;
-        }
-        .single-gallery{
-            position: relative;
-            img{
-                width: 100%;
-            }
-            .title{
-                position: absolute;
-                left: 0;
-                right: 0;
-                margin: 0 auto;
-                bottom: 0px;
-                text-align: center;
-                width: 90%;
-                background: var(--white);
-                color: var(--primary-title);
-                padding: 25px 8px;
-                font-size: 20px;
-                font-weight: 700;
-                z-index: 3;
-                align-items: center;
-                margin-bottom: 0;
-                line-height: 1;
-                @media #{$lg}{
-                    font-size: 15px;
-                }
-                @media #{$md}{
-                    font-size: 15px;
-                }
-    
-                i {
-                    color: #F2FFBE;
-                    font-size: 21px;
-                }
-            }
-    
-            &:hover{
-                .title{
-                    background: var(--primary);
-                    color: var(--white);
-                }
-            }
-        }
-    }
-}
-
-// 32. Services style thirty-Two
-.services-thirty-two{
-    .single-blogs{
-        border: 1px solid #E2E2E2;
-        padding: 20px 20px 40px 20px;
-        transition: .4s;
-        position: relative;
-        &::after{
-            content: "";
-            position: absolute;
-            width: 0;
-            bottom: 0px;
-            right: 5px;
-            left: 0px;
-            height: 3px;
-            z-index: 1;
-            background: var(--secondary);
-            transition: .4s;
-        }
-        .blog-img{
-            text-align: center;
-            padding: 20px 20px 20px 20px;
-            background: #F5F5F5;
-            margin-bottom: 30px;
-            
-            .blog-btn{
-                color:var(--white);
-                text-transform: capitalize;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                background: var(--btn-color-one);
-                padding: 25px 17px;
-                font-size: 16px !important;
-                width: 123px;
-                left: 0;
-                right: 0;
-                margin: 0 auto;
-                text-align: center;
-                opacity: 0;
-                visibility: hidden;
-            }
-        }
-        .blogs-cap{
-            span{
-                color: var(--primary-paragraph);
-                margin-bottom: 11px;
-                display: block;
-            }
-            .title{
-                color: var(--primary-title);
-                font-size: 22px;
-                line-height: 1.4;
-                margin-bottom: 12px;
-                // font-weight: 500;
-                display: block;
-                @media #{$sm}{
-                    font-size: 20px;
-                }
-                
-                &:hover{
-                    color: var(--primary-title);
-                }
-            }
-            .pera{
-                color: var(--primary-paragraph);
-                margin-bottom: 47px;
-                font-size: 18px;
-            }
-            .red-btn2{
-                width: 54px;
-                height: 54px;
-                line-height: 54px;
-                border: 1px solid var(--secondary);
-                border-radius: 50%;
-                display: block;
-                text-align: center;
-                margin: 0 auto;
-                i{
-                    color: var(--secondary);
-                }
-            }
-        }
-        &:hover{
-            background: #F5F5F5;
-            &::after{
-                left: 0;
-                right: auto;
-                width: 100%;
-                transition: .4s;
-            }
-            .blog-img{
-                &::before {
-                    opacity: 1;
-                    visibility: visible;
-                }
-            }
-            .blogs-cap{
-                .red-btn2{
-                    
-                    background: var(--secondary);
-                    border: 1px solid transparent;
-                    
-                    i{
-                        color: var(--white);
-                    } 
-                }
-            }
-        }
-    }
-}    
-
-// 9. Services style Nine
-.services-style-nine{
-    .single-events{
-        transition: .4s;
-        border-radius: 6px;
-        border: 1px solid #E8E8E8;
-        .events-caption {
-            transition: .4s;
-            min-height: 251px;
-            padding: 40px 47px 40px 34px;
-            .tags {
-                color: var(--white);
-                background:var(--primary);
-                padding: 3px 15px;
-                font-size: 14px;
-                font-weight: 400;
-                display: inline-block;
-                margin-bottom: 30px;
-                border-radius: 6px;
-            }
-            .title{
-                font-size: 20px;
-                margin-bottom: 19px;
-                line-height: 1.4;
-                &:hover{
-                    color: var(--primary);
-                }
-                @media #{$large1}{
-                    font-size: 20px;
-                }
-                @media #{$lg}{
-                    font-size: 15px;
-                }
-                @media #{$md}{
-                    font-size: 15px;
-                }
-                @media #{$xs}{
-                    font-size: 18px;
-                }
-            }
-            .pera{
-                color:var(--primary-title);
-                font-size: 14px;
-                font-weight: 400;
-                margin-bottom: 35px;
-                line-height: 1.5;
-            }
-            .cmn-btn1{
-                border: 1px solid var(--primary);
-                color: var(--primary);
-                width: 100%;
-                text-align: center;
-                padding: 15px 20px;
-                border-radius: 6px;
-                background: none;
-                @media #{$xs}{
-                    font-size: 14px;
-                }
-            }
-
-        }
-        // Hover
-       &:hover {
-            box-shadow: 0px 15px 40px rgba(0, 61, 43,.1);
-            .events-caption {
-                transition: .4s;
-                background-image: url(../images/services/case-bg.jpg);
-                background-repeat:no-repeat ;
-                background-position: center center;
-                background-size: 100% 100%;
-                
-                span {
-                    color:var(--white);
-                }
-                h3 {
-                    a{
-                        color:var(--white);
-                    }
-                }
-                .pera{
-                    color:var(--white);
-                }
-            }
-            .cmn-btn1{
-                background:var(--primary);
-                border-color:var(--primary);
-                color: var(--white);
-            }
-       }
-    }
-}
-
-// 35. Services style thirty-Five
-.services-thirty-five{
-    .services-area{
-        img{
-            min-height: 320px;
-            @media #{$xs}{
-                min-height: auto;
-            }
-        }
-        .single-blogs{
-            .blogs-cap{
-                margin: 0px 20px 0px 20px;
-                min-height: 320px;
-                border-bottom: 2px solid #E3E3EE;
-                padding-top: 30px;
-                span{
-                    display: block;
-                }
-                .title{
-                    color: var(--primary-title);
-                    font-size: 25px;
-                    line-height: 1.4;
-                    margin-bottom: 29px;
-                    display: block;
-                    @media #{$xs-to-sm-max}{
-                        font-size: 20px;
-                    }
-                    br{
-                        @media #{$sm}{
-                            display: none;
-                        }
-                        @media #{$xs}{
-                            display: none;
-                        }
-                    }
-                    &:hover{
-                        color: var(--primary);
-                    }
-                }
-                .pera{
-                    color: var(--primary-title);
-                    margin-bottom: 26px;
-                    font-size: 16px;
-                }
-                .browse{
-                    color: var(--primary);
-                    text-transform: uppercase;
-                    font-size: 16px;
-                    line-height: 1.4;
-                    margin-bottom: 35px;
-                    font-weight: 500;
-                    display: inline-block;
-                    position: relative;
-                    // padding-left: 60px;
-                    @media #{$sm}{
-                        font-size: 20px;
-                    }
-                    &:hover{
-                        color: var(--primary);
-                    }
-                    &::before {
-                        transition: .4s;
-                        position: absolute;
-                        content: "";
-                        width: 15px;
-                        height: 2px;
-                        background: var(--primary);
-
-                        right: -40px;
-                        top: 40%;
-                        transform: translateY(40%);
-                        z-index: 0;
-                    }  
-                }
-            }
-            &:hover{
-                .blogs-cap{
-                    .title{
-                        color: var(--primary);
-                    }
-                }
-                .browse{
-                    padding-left: 35px;
-                    color: var(--primary);
-                    &::before {
-                        left: 0px;
-                    }
-                }
-            }
-            
-        }
-    }
-}    
-
-// 36. Services style thirty-Six 
-.services-thirty-six{
+// 1. Services style one
+.services-one{
     .single-team{
         .team-img{
             margin-bottom: 25px;
@@ -1355,6 +145,798 @@
     }
 }
 
+// 2. Services style Two
+.services-style-two {
+    .single-cat{
+        border: 1px solid #ddd;
+        padding: 52px 50px;
+        transition: .4s;
+        z-index: 1;
+        border-radius: 10px;
+        @media #{$lg}{
+            padding: 36px 29px;
+        }
+        @media #{$xs}{
+            padding: 30px 22px;
+        }
+        @media #{$sm}{
+            padding: 30px 18px;
+        }
+        // icon
+        .cat-icon{
+            img{
+                margin-bottom: 31px;
+            }
+        }
+        .cat-cap{
+            .title{
+                color: var(--primary-title);
+                @include transition(.2s);
+                font-size: 22px;
+                margin-bottom: 14px;
+                display: block;
+                @media #{$xs}{
+                    font-size: 18px;
+                }
+            }
+            .pera{
+                @include transition(.2s);
+                font-size: 16px;
+                margin-bottom: 34px;
+                @media #{$sm}{
+                    font-size: 15px;
+
+                }
+            }
+            .browse-btn{
+                color: var(--primary-title);
+                @include transition(.2s);
+                text-transform: capitalize;
+                font-size: 16px;
+                &:Hover{
+                    color: var(--primary);
+                }
+            }
+        }
+        // Hover Effect In single 
+        &:hover{
+            border: 1px solid transparent;
+            box-shadow: 0px 15px 25px rgba(168, 96, 0,.1);
+       }
+    }
+}
+
+// 3. Services style three
+.services-style-three{
+    .services-area{
+        img{
+            min-height: 320px;
+            @media #{$xs}{
+                min-height: auto;
+            }
+        }
+        .single-blogs{
+            .blogs-cap{
+                margin: 0px 20px 0px 20px;
+                min-height: 320px;
+                border-bottom: 2px solid #E3E3EE;
+                padding-top: 30px;
+                span{
+                    display: block;
+                }
+                .title{
+                    color: var(--primary-title);
+                    font-size: 25px;
+                    line-height: 1.4;
+                    margin-bottom: 29px;
+                    display: block;
+                    @media #{$xs-to-sm-max}{
+                        font-size: 20px;
+                    }
+                    br{
+                        @media #{$sm}{
+                            display: none;
+                        }
+                        @media #{$xs}{
+                            display: none;
+                        }
+                    }
+                    &:hover{
+                        color: var(--primary);
+                    }
+                }
+                .pera{
+                    color: var(--primary-title);
+                    margin-bottom: 26px;
+                    font-size: 16px;
+                }
+                .browse{
+                    color: var(--primary);
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    line-height: 1.4;
+                    margin-bottom: 35px;
+                    font-weight: 500;
+                    display: inline-block;
+                    position: relative;
+                    // padding-left: 60px;
+                    @media #{$sm}{
+                        font-size: 20px;
+                    }
+                    &:hover{
+                        color: var(--primary);
+                    }
+                    &::before {
+                        transition: .4s;
+                        position: absolute;
+                        content: "";
+                        width: 15px;
+                        height: 2px;
+                        background: var(--primary);
+
+                        right: -40px;
+                        top: 40%;
+                        transform: translateY(40%);
+                        z-index: 0;
+                    }  
+                }
+            }
+            &:hover{
+                .blogs-cap{
+                    .title{
+                        color: var(--primary);
+                    }
+                }
+                .browse{
+                    padding-left: 35px;
+                    color: var(--primary);
+                    &::before {
+                        left: 0px;
+                    }
+                }
+            }
+            
+        }
+    }
+}   
+
+// 4. Services style four
+.services-style-four{
+    .single-blogs{
+        border: 1px solid #E2E2E2;
+        padding: 20px 20px 40px 20px;
+        transition: .4s;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 0;
+            bottom: 0px;
+            right: 5px;
+            left: 0px;
+            height: 3px;
+            z-index: 1;
+            background: var(--secondary);
+            transition: .4s;
+        }
+        .blog-img{
+            text-align: center;
+            padding: 20px 20px 20px 20px;
+            background: #F5F5F5;
+            margin-bottom: 30px;
+            
+            .blog-btn{
+                color:var(--white);
+                text-transform: capitalize;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: var(--btn-color-one);
+                padding: 25px 17px;
+                font-size: 16px !important;
+                width: 123px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                text-align: center;
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        .blogs-cap{
+            span{
+                color: var(--primary-paragraph);
+                margin-bottom: 11px;
+                display: block;
+            }
+            .title{
+                color: var(--primary-title);
+                font-size: 22px;
+                line-height: 1.4;
+                margin-bottom: 12px;
+                // font-weight: 500;
+                display: block;
+                @media #{$sm}{
+                    font-size: 20px;
+                }
+                
+                &:hover{
+                    color: var(--primary-title);
+                }
+            }
+            .pera{
+                color: var(--primary-paragraph);
+                margin-bottom: 47px;
+                font-size: 18px;
+            }
+            .red-btn2{
+                width: 54px;
+                height: 54px;
+                line-height: 54px;
+                border: 1px solid var(--secondary);
+                border-radius: 50%;
+                display: block;
+                text-align: center;
+                margin: 0 auto;
+                i{
+                    color: var(--secondary);
+                }
+            }
+        }
+        &:hover{
+            background: #F5F5F5;
+            &::after{
+                left: 0;
+                right: auto;
+                width: 100%;
+                transition: .4s;
+            }
+            .blog-img{
+                &::before {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            .blogs-cap{
+                .red-btn2{
+                    
+                    background: var(--secondary);
+                    border: 1px solid transparent;
+                    
+                    i{
+                        color: var(--white);
+                    } 
+                }
+            }
+        }
+    }
+}  
+
+// 5. Services style Five 
+.services-style-five {
+    %overlay2{
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff4495+0,ff6d6d+100 */
+        background: rgb(255,68,149); /* Old browsers */
+        background: -moz-linear-gradient(top,  rgba(255,68,149,1) 0%, rgba(255,109,109,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(255,68,149,1) 0%,rgba(255,109,109,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(255,68,149,1) 0%,rgba(255,109,109,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4495', endColorstr='#ff6d6d',GradientType=0 ); /* IE6-9 */
+      
+       }
+
+    .single-cat{
+        background:#FFF6FA;
+        border-radius: 0px;
+        padding: 40px 21px;
+        transition: .4s;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 0;
+            // background:#ff3d1c;
+            @extend %overlay2;
+            transition: .6s;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            border-radius: 0px;
+        }
+        .cat-icon{
+            color: var(--primary);
+            font-size: 50px;
+            margin-bottom: 30px;
+            display: block;
+            margin-bottom: 50px;
+
+            width: 100px;
+            height: 100px;
+            background:var(--white);
+            line-height: 100px;
+            text-align: center;
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0px 15px 25px rgba(0, 4, 74,.04);
+            img{
+
+            }
+        }
+        .cat-cap{
+            h5{
+             & > a{
+                 color: var(--primary-title);
+                font-size: 26px;
+                font-weight: 400;
+                margin-bottom: 21px;
+                display: block;
+                @include transition(.2s);
+                @media #{$sm}{
+                    font-size: 21px;
+                }
+                @media #{$xs}{
+                    font-size: 21px;
+                }
+              }
+            }
+            .pera{
+                margin-bottom: 36px;
+                color: #3F4854;
+                font-size: 16px;
+                @include transition(.2s);
+                margin: 0;
+                @media #{$sm}{
+                    font-size: 15px;
+
+                }
+            }
+            a{
+                color: #1c165c;
+                font-size: 16px;
+                font-weight: 600;
+                @include transition(.2s);
+            }
+        }
+
+
+        // Hover Effect In single 
+        &:hover{
+            &::before {
+                height: 100%;
+            }
+            .cat-icon{
+            span{
+                background:var(--white);
+            }
+            }
+            .cat-cap{
+                h5{
+                    color: var(--white);
+                }
+                .pera{
+                    color: var(--white);
+                }
+                a{
+                    color: var(--white);
+                }
+            }
+       }
+    }
+}
+
+// 6. Services style six
+.services-style-six{
+    .single-cat{
+        padding: 40px 21px;
+        transition: .4s;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 25px 35px rgba(68, 162, 255,.1);
+        -webkit-box-shadow: 0 10px 20px rgba(2,60,90,0.1);
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 0;
+            background:#192839;
+            // @extend %overlay2;
+            transition: .6s;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            border-radius: 5px;
+        }
+        .title{
+            color: var(--primary-title);
+            font-size: 22px;
+            margin-bottom: 21px;
+            display: block;
+            @include transition(.2s);
+            @media #{$sm}{
+                font-size: 21px;
+            }
+            @media #{$xs}{
+                font-size: 21px;
+            }
+        }
+        .cat-icon{
+            color: var(--primary);
+            margin-bottom: 30px;
+            display: block;
+
+            width: 78px;
+            height: 78px;
+            background:#FFE1EE;
+            line-height: 78px;
+            text-align: center;
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0px 15px 25px rgba(0, 4, 74,.04);
+        }
+        .cat-cap{
+            .pera{
+                margin-bottom: 36px;
+                color: var(--primary-title);
+                font-size: 18px;
+                @include transition(.2s);
+                margin: 0;
+                @media #{$sm}{
+                    font-size: 15px;
+                }
+            }
+            .title{
+                color: #1c165c;
+                font-size: 16px;
+                font-weight: 600;
+                @include transition(.2s);
+            }
+        }
+
+
+        // Hover Effect In single 
+        &:hover{
+            &::before {
+                height: 100%;
+            }
+            .cat-icon{
+                span{
+                    background:var(--white);
+                }
+            }
+            .title{
+                color: var(--white);
+            }
+           
+            .cat-cap{
+                .title{
+                    color: var(--white);
+                }
+                .pera{
+                    color: var(--white);
+                }
+            }
+       }
+    }
+}
+
+// 7. Services style Seven
+.services-style-seven{
+    .single-services{
+        .services-img {
+            position: relative;
+            border-radius: 16px;
+            img {
+                width: 100%;
+                border-radius: 16px;
+            }
+        }
+        .services-caption {
+            
+            transition: .4s;
+            position: absolute;
+            bottom: -65px;
+
+            width: 80%;
+            padding-top: 34px;
+            padding-bottom: 25px;
+            padding-left: 29px;
+            padding-right: 15px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            overflow: hidden;
+            -webkit-box-shadow: 0 10px 20px rgba(2, 60, 90,.1);
+            border-radius: 10px;
+            @media #{$lg}{
+                width: 90%;
+            }
+            @media #{$md}{
+                padding-left: 15px;
+                width: 90%;
+            }
+            @media #{$sm}{
+                width: 90%;
+            }
+            @media #{$xs}{
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .title{
+                color:var(--primary-title);
+                font-size: 22px;
+                margin-bottom: 14px;
+                display: block;
+                @media #{$md}{
+                    font-size: 18px;
+                    margin-bottom: 6px;
+                }
+                @media #{$md}{
+                    font-size: 18px;
+                    margin-bottom: 6px;
+                }
+                @media #{$sm}{
+                    font-size: 18px;
+                    margin-bottom: 6px;
+                }
+                &:hover{
+                    color: var(--primary);
+                }
+            }
+            .pera{
+                font-size: 16px;
+                margin: 0;
+                padding: 0;
+                line-height: 1.4;
+            }
+        }
+    }
+}
+
+// 8. Services style twenty-one 
+.services-style-eight{
+    .red-btn2 i {
+        border: 1px solid #E8E7D3;
+        color: var(--primary-title);
+        background: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: inline-block;
+        line-height: 50px;
+        position: relative;
+        top: 5px;
+        text-align: center;
+    }
+    .services-area{
+        .single-blogs{
+            padding: 60px 40px 60px 40px;
+            transition: .4s;
+            .blog-img{
+                text-align: center;
+                img{
+                    margin-bottom: 25px;
+                }
+                .blog-btn{
+                    color:var(--white);
+                    text-transform: capitalize;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: var(--primary);
+                    padding: 25px 17px;
+                    font-size: 16px !important;
+                    width: 123px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    text-align: center;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+            .blogs-cap{
+                span{
+                    margin-bottom: 11px;
+                    display: block;
+                }
+                .title{
+                    color: var(--primary-title);
+                    font-size: 22px;
+                    line-height: 1.4;
+                    margin-bottom: 12px;
+                    @media #{$sm}{
+                        font-size: 20px;
+                    }
+                    
+                    &:hover{
+                        color: var(--primary-title);
+                    }
+                }
+                .pera{
+                    margin-bottom: 24px;
+                    font-size: 16px;
+                }
+            }
+            &:hover{
+                background: #F8F8F8;
+                .blog-img{
+                    &::before {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                .blogs-cap{
+                    .red-btn2{
+                        i{
+                            background: var(--primary);
+                            border: 1px solid transparent;
+                            color: var(--white); 
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}
+
+// 9. Services style Nine
+.services-style-nine{
+    .single-events{
+        transition: .4s;
+        border-radius: 6px;
+        border: 1px solid #E8E8E8;
+        .events-caption {
+            transition: .4s;
+            min-height: 251px;
+            padding: 40px 47px 40px 34px;
+            .tags {
+                color: var(--white);
+                background:var(--primary);
+                padding: 3px 15px;
+                font-size: 14px;
+                font-weight: 400;
+                display: inline-block;
+                margin-bottom: 30px;
+                border-radius: 6px;
+            }
+            .title{
+                font-size: 20px;
+                margin-bottom: 19px;
+                line-height: 1.4;
+                &:hover{
+                    color: var(--primary);
+                }
+                @media #{$large1}{
+                    font-size: 20px;
+                }
+                @media #{$lg}{
+                    font-size: 15px;
+                }
+                @media #{$md}{
+                    font-size: 15px;
+                }
+                @media #{$xs}{
+                    font-size: 18px;
+                }
+            }
+            .pera{
+                color:var(--primary-title);
+                font-size: 14px;
+                font-weight: 400;
+                margin-bottom: 35px;
+                line-height: 1.5;
+            }
+            .cmn-btn1{
+                border: 1px solid var(--primary);
+                color: var(--primary);
+                width: 100%;
+                text-align: center;
+                padding: 15px 20px;
+                border-radius: 6px;
+                background: none;
+                @media #{$xs}{
+                    font-size: 14px;
+                }
+            }
+
+        }
+        // Hover
+       &:hover {
+            box-shadow: 0px 15px 40px rgba(0, 61, 43,.1);
+            .events-caption {
+                transition: .4s;
+                background-image: url(../images/services/case-bg.jpg);
+                background-repeat:no-repeat ;
+                background-position: center center;
+                background-size: 100% 100%;
+                
+                span {
+                    color:var(--white);
+                }
+                h3 {
+                    a{
+                        color:var(--white);
+                    }
+                }
+                .pera{
+                    color:var(--white);
+                }
+            }
+            .cmn-btn1{
+                background:var(--primary);
+                border-color:var(--primary);
+                color: var(--white);
+            }
+       }
+    }
+}
+
+// 10. Services style ten 
+.services-style-ten{
+    .single-cat{
+        transition: .4s;
+        background:var(--white);
+        padding: 40px 20px 35px 20px;
+        position: relative;
+        z-index: 1;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 0;
+            background:#F2F4F8;
+            transition: .6s;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .cat-icon{
+            margin-bottom: 25px;
+        }
+        .cat-cap{
+            .title{
+                color: var(--primary-title);
+                @include transition(.2s);
+                font-size: 18px;
+                margin-bottom: 0px;
+                text-decoration: underline transparent;
+                @media #{$large1}{
+                    font-size: 16px;
+                }
+                @media #{$sm}{
+                    font-size: 16px;
+                }
+                @media #{$xs}{
+                    font-size: 16px;
+                }
+                }
+            .pera{
+                margin-bottom: 36px;
+                font-size: 16px;
+                @include transition(.2s);
+                margin: 0;
+                @media #{$sm}{
+                    font-size: 15px;
+                }
+            }
+        }
+        // Hover Effect In single 
+        &:hover{
+            &::before {
+                height: 100%;
+            }
+            .cat-cap{
+                .title{
+                    color: var(--primary);
+                    text-decoration: underline;
+                }
+            }
+       }
+    }
+}
+
 // 11. Services style eleven
 .services-style-eleven{
     .our-client-wapper{
@@ -1403,9 +985,8 @@
         }
     }
 }
-
-// services-three
-.servicesAreaThree {
+// 12. services-style-twelve
+.services-style-twelve {
     .single-cat{
         padding: 64px 33px 60px 35px;
         transition: .4s;
@@ -1480,5 +1061,87 @@
                 width: 100%;
             }
        }   
+    }
+}
+
+// 13. Services style thirteen 
+.services-style-thirteen{
+    .single-blogs{
+        .blog-img{
+            margin-bottom: 25px;
+            width: 100%;
+            position: relative;
+            border-radius: 6px;
+            overflow: hidden;
+            &::before {
+                @include transition(.3s);
+                position: absolute;
+                content: "";
+                background-color:rgba(84, 84, 84,.6);
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                opacity: 0;
+                visibility: hidden;
+                border-radius: 6px;
+            }
+            img{
+                width: 100%;
+                border-radius: 6px;
+            }
+            .blog-btn{
+                color:var(--white);
+                text-transform: capitalize;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: var(--primary);
+                padding: 11px 14px;
+                font-size: 16px !important;
+                width: 143px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                text-align: center;
+                opacity: 0;
+                visibility: hidden;
+                display: inline-block;
+                border-radius: 6px;
+            }
+        }
+        .blogs-cap{
+            .title{
+                color: var(--primary-title);
+                font-size: 22px;
+                line-height: 1.4;
+                margin-bottom: 12px;
+                display: block;
+                @media #{$sm}{
+                    font-size: 20px;
+                }
+                &:hover{
+                    color: var(--primary);
+                }
+            }
+            .pera{
+                margin-bottom: 24px;
+                font-size: 18px;
+            }
+        }
+        &:hover{
+            .blog-img{
+                &::before {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            .blog-btn{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
     }
 }
