@@ -615,19 +615,11 @@ object {
 		}
 	}	
 	.footer-padding{
-		padding-top: 100px;
+		padding-top: 80px;
 		padding-bottom: 50px;
-		@media #{$md}{
-			padding-top: 100px;
-			padding-bottom: 20px;
-		}
-		@media #{$sm}{
-			padding-top: 80px;
-			padding-bottom: 20px;
-		}
 		@media #{$xs}{
-			padding-top: 80px;
-			padding-bottom: 0px;
+			padding-top: 60px;
+			padding-bottom: 40px;
 		}
 	}
 
