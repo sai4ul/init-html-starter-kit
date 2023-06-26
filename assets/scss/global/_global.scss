@@ -498,71 +498,20 @@ object {
 }
 
 
-
-
-.inner-section-padding{
-	padding-top: 80px;
-	padding-bottom: 56px;
-	@media #{$md}{
-		padding-top: 80px;
-		padding-bottom: 56px;
-	}
-	@media #{$sm}{
-		padding-top: 80px;
-		padding-bottom: 56px;
-	}
-	@media #{$xs}{
-		padding-top: 115px;
-		padding-bottom: 56px;
-	}
-}
-.inner-section-padding2{
-	padding-top: 80px;
-	padding-bottom: 80px;
-	@media #{$md}{
-		padding-top: 80px;
-		padding-bottom: 80px;
-	}
-	@media #{$sm}{
-		padding-top: 80px;
-		padding-bottom: 80px;
-	}
-	@media #{$xs}{
-		padding-top: 115px;
-		padding-bottom: 80px;
-	}
-}
-
 /*-- Section Padding -- */
 	.section-padding {
 		padding-top: 100px;
 		padding-bottom: 100px;
-		@media #{$md}{
-			padding-top: 70px;
-			padding-bottom: 70px;
-		}
-		@media #{$sm}{
-			padding-top: 70px;
-			padding-bottom: 70px;
-		}
-		@media #{$xs}{
+		@media #{$xs-to-md-max}{
 			padding-top: 70px;
 			padding-bottom: 70px;
 		}
 	}
 	.section-padding2{
-		padding-top: 100px;
+		padding-top: 90px;
 		padding-bottom: 100px;
-		@media #{$md}{
-			padding-top: 70px;
-			padding-bottom: 70px;
-		}
-		@media #{$sm}{
-			padding-top: 70px;
-		padding-bottom: 70px;
-		}
-		@media #{$xs}{
-			padding-top: 70px;
+		@media #{$xs-to-md-max}{
+			padding-top: 65px;
 			padding-bottom: 70px;
 		}
 	}
@@ -580,37 +529,19 @@ object {
 	}	
 	.top-padding2{
 		padding-top: 95px;
-		@media #{$md}{
-			padding-top: 70px;
-		}
-		@media #{$sm}{
-			padding-top: 70px;
-		}
-		@media #{$xs}{
+		@media #{$xs-to-md-max}{
 			padding-top: 70px;
 		}
 	}	
 	.bottom-padding{
-		padding-bottom: 75px;
-		@media #{$md}{
-			padding-bottom: 45px;
-		}
-		@media #{$sm}{
-			padding-bottom: 45px;
-		}
-		@media #{$xs}{
-			padding-bottom: 45px;
+		padding-bottom: 100px;
+		@media #{$xs-to-md-max}{
+			padding-bottom: 70px;
 		}
 	}	
 	.bottom-padding2{
-		padding-bottom: 100px;
-		@media #{$md}{
-			padding-bottom: 45px;
-		}
-		@media #{$sm}{
-			padding-bottom: 45px;
-		}
-		@media #{$xs}{
+		padding-bottom: 76px;
+		@media #{$xs-to-md-max}{
 			padding-bottom: 45px;
 		}
 	}	
@@ -622,24 +553,6 @@ object {
 			padding-bottom: 40px;
 		}
 	}
-
-	.footer-padding2{
-    padding-top: 315px;
-    padding-bottom: 50px;
-		@media #{$md}{
-			padding-top: 100px;
-			padding-bottom: 20px;
-		}
-		@media #{$sm}{
-			padding-top: 80px;
-			padding-bottom: 20px;
-		}
-		@media #{$xs}{
-			padding-top: 80px;
-			padding-bottom: 0px;
-		}
-	}
-
 
 // section Tittle
 .section-tittle-one{
