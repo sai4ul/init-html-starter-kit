@@ -2,17 +2,11 @@
     min-height: 800px;
     background-position: center center;
     background-size: cover;
-    @media #{$md}{
-        min-height: 300px;
-    }
-    @media #{$md}{
-        min-height: 300px;
-    }
     @media #{$sm}{
-        min-height: 300px;
+        min-height: 700px;
     }
     @media #{$xs}{
-        min-height: 300px;
+        min-height: 700px;
     }
 }
 .slider-height2{
@@ -48,7 +42,18 @@
         background-repeat: no-repeat;
     }
 }
-
+.hero-padding{
+    padding-top: 140px;
+    padding-bottom: 140px;
+    @media #{$md}{
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+    @media #{$xs-to-sm-max}{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
 @keyframes action-bg {
     from {
         background-position: 0 0;
