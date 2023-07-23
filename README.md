@@ -100,3 +100,11 @@ If you need to write any javascript and query code then you write it in a file n
 
 Its <a href="https://sai4ul.com" target="_blank"> sai4ule</a>, Front-end Developer.
 Dhaka , Bangladesh
+
+
+### Licensing
+Its an `Open Source` Project. Feel free to use it as per the `Guidelines of Open Source (GPL v3)` and share. Thank you. Here're a few words about `GPL v3` License -
+
+  The GPL is often used for software projects and requires that, if developers distribute a modified version of the software, they do so under the same license. This means that if someone modifies your software and distributes the modified version, they must make the source code for that version available to others under the same terms.
+
+  The GPL also requires that users credit you as the original creator of the software and include a copy of the license with any distributions.
