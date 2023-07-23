@@ -100,3 +100,7 @@ If you need to write any javascript and query code then you write it in a file n
 
 Its <a href="https://sai4ul.com" target="_blank"> sai4ule</a>, Front-end Developer.
 Dhaka , Bangladesh
+
+
+### Licensing
+Its an `Open Source` Project. Feel free to use it as per the `Guidelines of Open Source` and share. Thank you.
