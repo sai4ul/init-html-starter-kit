@@ -267,12 +267,12 @@
     }
 
 // Fonts weight
-$i: 100,200,300,400,500,600,700,800,900;
-@each $val in $i {
-    .font-#{$val} {
-        font-weight: $val;
-    }
-}
+	$i: 100,200,300,400,500,600,700,800,900;
+	@each $val in $i {
+		.font-#{$val} {
+			font-weight: $val;
+		}
+	}
 
 
 
