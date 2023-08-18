@@ -112,7 +112,8 @@ Thanks to these wonderful people!
 |                                             [ShahriarRahat](https://github.com/ShahriarRahat)                                              |                                             [jmrashed](https://github.com/jmrashed)                                             |                                             [remi-bruguier](https://github.com/remi-bruguier)                                             |                                             [sparklesam](https://github.com/sparklesam)                                              |                                             [vinnymac](https://github.com/vinnymac)                                             |                                             [mariolopjr](https://github.com/mariolopjr)                                             |
 
 
-### Licensing
+## Licensing
+
 Its an `Open Source` Project. Feel free to use it as per the `Guidelines of Open Source (GPL v3)` and share. Thank you. Here're a few words about `GPL v3` License -
 
   The GPL is often used for software projects and requires that, if developers distribute a modified version of the software, they do so under the same license. This means that if someone modifies your software and distributes the modified version, they must make the source code for that version available to others under the same terms.
