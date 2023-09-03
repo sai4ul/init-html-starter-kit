@@ -19781,10 +19781,10 @@ input[type=number] {
   color: var(--white);
 }
 .services-style-nine .single-events:hover .events-caption h3 a {
-  color: var(--white);
+  color: var(--bs-dark);
 }
 .services-style-nine .single-events:hover .events-caption .pera {
-  color: var(--white);
+  color: var(--bs-dark);
 }
 .services-style-nine .single-events:hover .cmn-btn1 {
   background: var(--primary);
