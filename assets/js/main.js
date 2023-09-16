@@ -97,7 +97,34 @@
     -----------------------------------*/
     new WOW().init();
 
+    /*-----------------------------------
+        Product Counter Cart Table
+    -----------------------------------*/
+        var incrementPlus;
+        var incrementMinus;
+        var buttonPlus  = $(".count-plus");
+        var buttonMinus = $(".count-minus");
 
+        var incrementPlus = buttonPlus.click(function() {
+        var $n = $(this)
+            .parent(".button-container")
+            .parent(".productCount")
+            .find(".qty");
+
+            $n.val(Number($n.val())+1 );
+        });
+        var incrementMinus = buttonMinus.click(function() {
+            var $n = $(this)
+            .parent(".button-container")
+            .parent(".productCount")
+            .find(".qty");
+
+            var amount = Number($n.val());
+            if (amount > 0) {
+                $n.val(amount-1);
+            }
+        });
+		
     /*-----------------------------------
        Write Your Any JS/Jquery Syntax
     -----------------------------------*/

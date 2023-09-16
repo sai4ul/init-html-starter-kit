@@ -20,7 +20,99 @@
     <!-- Main CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
 </head>
+<style>
 
+.table-wrapper {
+  width:100%;
+  overflow-x:auto;
+  padding:5px
+}
+.table-wrapper table {
+  border-collapse:collapse;
+  width:100%;
+  border-radius:12px;
+  border-style:hidden;
+  box-shadow:0 0 0 1px #e6e8ec
+}
+.table-wrapper table thead th {
+  padding:16px;
+  font-weight:500;
+  font-size:16px;
+  line-height:19px;
+  color:#23262f;
+  border:1px solid #e6e8ec
+}
+.table-wrapper table tbody tr td {
+  padding:13px 16px;
+  font-weight:500;
+  font-size:14px;
+  line-height:17px;
+  color:#6f767e;
+  vertical-align:middle;
+  border:1px solid #e6e8ec
+}
+.table-wrapper table tbody tr td p {
+  font-weight:500;
+  font-size:14px;
+  line-height:17px;
+  color:#6f767e
+}
+.productWrap .product-img {
+  margin-right:20px;
+  max-width:48px;
+  height:48px;
+  overflow:hidden;
+  min-width:48px
+}
+.productWrap .cartCap .title {
+  font-size:14px;
+  margin-bottom:6px
+}
+@media (max-width: 991px) {
+  .productWrap .cartCap .title {
+    margin-bottom:10px
+  }
+}
+.productWrap .cartCap .pera {
+  font-size:12px;
+  margin:0
+}
+.productCount {
+  width:110px;
+  text-align:center;
+  position:relative
+}
+.productCount input.qty {
+  width:100%;
+  text-align:center;
+  border:1px solid #ddd;
+  padding:9px 20px;
+  height:33px;
+  border-radius:4px
+}
+.productCount .count-plus,
+.productCount .count-minus {
+  border:0px solid transparent;
+  background-color:transparent;
+  color:#8D8F97
+}
+.productCount .count-plus {
+  position:absolute;
+  right:9px;
+  top:6px
+}
+.productCount .count-minus {
+  position:absolute;
+  left:9px;
+  top:7px
+}
+.productCount .button-container .productCount {
+  border:1px solid #ddd;
+  padding:10px 20px
+}
+
+
+</style>
 <body>
 
     <header>
@@ -92,7 +184,216 @@
         </div>
         <!-- End-of Tab Button -->
 
-		<h2>Comming Soon</H2>
+		   <!-- Table Style Three -->
+        <div class="table-style-three product-table top-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-12">
+                        <div class="section-tittle-one mb-30">
+                            <h2 class="title position-relative d-inline-block"><span class="titleBg2"></span>Table Style Three</h2>
+                        </div> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="table-wrapper">
+                        <table class="table-responsive">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
+                                    <th>Total</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="productWrap d-flex align-items-center">
+                                           <div class="product-img">
+                                                <img src="assets/images/table/product_img1.jpg" alt="Its image" class="img-cover">
+                                           </div>
+                                            <div class="cartCap">
+                                                <h5 class="title font-600">Food items</h5>
+                                                <p class="pera">Color:Brown</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="productCount">
+                                            <input type="text" name="qty" value="0" class="input-text qty">
+                                            <div class="button-container">
+                                                <button class="count-plus" type="button" value="+"><i class="las la-plus"></i></button>
+                                                <button class="count-minus" type="button" value="-"><i class="las la-minus"></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>$250.00</td>
+                                    <td>$250.00</td>
+                                    <td>
+                                        <!-- DropDown -->
+                                        <div class="dropdown custom-dropdown mb-10">
+                                            <button class="dropdown-toggle" type="button"  data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="las la-ellipsis-h"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end" >
+                                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="productWrap d-flex align-items-center">
+                                           <div class="product-img">
+                                                <img src="assets/images/table/product1.jpg" alt="Its image" class="img-cover">
+                                           </div>
+                                            <div class="cartCap">
+                                                <h5 class="title font-600">Digital Bandage</h5>
+                                                <p class="pera">Color:Brown</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="productCount">
+                                            <input type="text" name="qty" value="0" class="input-text qty">
+                                            <div class="button-container">
+                                                <button class="count-plus" type="button" value="+"><i class="las la-plus"></i></button>
+                                                <button class="count-minus" type="button" value="-"><i class="las la-minus"></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>$250.00</td>
+                                    <td>$250.00</td>
+                                    <td>
+                                        <!-- DropDown -->
+                                        <div class="dropdown custom-dropdown mb-10">
+                                            <button class="dropdown-toggle" type="button"  data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="las la-ellipsis-h"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end" >
+                                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="productWrap d-flex align-items-center">
+                                           <div class="product-img">
+                                                <img src="assets/images/table/product2.jpg" alt="Its image" class="img-cover">
+                                           </div>
+                                            <div class="cartCap">
+                                                <h5 class="title font-600">New Beg</h5>
+                                                <p class="pera">Color:Brown</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="productCount">
+                                            <input type="text" name="qty" value="0" class="input-text qty">
+                                            <div class="button-container">
+                                                <button class="count-plus" type="button" value="+"><i class="las la-plus"></i></button>
+                                                <button class="count-minus" type="button" value="-"><i class="las la-minus"></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>$250.00</td>
+                                    <td>$250.00</td>
+                                    <td>
+                                        <!-- DropDown -->
+                                        <div class="dropdown custom-dropdown mb-10">
+                                            <button class="dropdown-toggle" type="button"  data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="las la-ellipsis-h"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end" >
+                                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="productWrap d-flex align-items-center">
+                                           <div class="product-img">
+                                                <img src="assets/images/table/product4.jpg" alt="Its image" class="img-cover">
+                                           </div>
+                                            <div class="cartCap">
+                                                <h5 class="title font-600">Digital Bandage</h5>
+                                                <p class="pera">Color:Brown</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="productCount">
+                                            <input type="text" name="qty" value="0" class="input-text qty">
+                                            <div class="button-container">
+                                                <button class="count-plus" type="button" value="+"><i class="las la-plus"></i></button>
+                                                <button class="count-minus" type="button" value="-"><i class="las la-minus"></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>$250.00</td>
+                                    <td>$250.00</td>
+                                    <td>
+                                        <!-- DropDown -->
+                                        <div class="dropdown custom-dropdown mb-10">
+                                            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="las la-ellipsis-h"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end" >
+                                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="productWrap d-flex align-items-center">
+                                           <div class="product-img">
+                                                <img src="assets/images/table/product_img5.jpg" alt="Its image" class="img-cover">
+                                           </div>
+                                            <div class="cartCap">
+                                                <h5 class="title font-600">Digital Bandage</h5>
+                                                <p class="pera">Color:Brown</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="productCount">
+                                            <input type="text" name="qty" value="0" class="input-text qty">
+                                            <div class="button-container">
+                                                <button class="count-plus" type="button" value="+"><i class="las la-plus"></i></button>
+                                                <button class="count-minus" type="button" value="-"><i class="las la-minus"></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>$250.00</td>
+                                    <td>$250.00</td>
+                                    <td>
+                                        <!-- DropDown -->
+                                        <div class="dropdown custom-dropdown mb-10">
+                                            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="las la-ellipsis-h"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end" >
+                                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End-of Table -->
     </main>
 	
     <!-- Footer -->
