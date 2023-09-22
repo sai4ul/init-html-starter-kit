@@ -92,6 +92,27 @@
     };
 
 
+
+  /*-----------------------------------
+    Tab & Grid View Button color active
+  -----------------------------------*/
+    $(".tab-grid button").click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+
+    /*-----------------------------------
+    Tab vew & grid Vew Content
+    -----------------------------------*/
+    $(document).on("click", ".grid-view", function (){
+        $(this).parent().parent().parent().parent().parent().parent().parent().find(".view-wrapper").addClass("col-xl-12").removeClass("col-xl-4 col-lg-6 col-md-6 col-sm-12");
+        $(this).parent().parent().parent().parent().parent().parent().parent().parent().find(".single-product").addClass("grids-views");
+    });
+    $(document).on("click", ".tab-view", function (){
+        $(this).parent().parent().parent().parent().parent().parent().parent().find(".view-wrapper").removeClass("col-xl-12").addClass("col-xl-4 col-lg-6 col-md-6 col-sm-12");
+        $(this).parent().parent().parent().parent().parent().parent().parent().parent().find(".single-product").removeClass("grids-views");
+    });
+
+
     /*-----------------------------------
         WOW active
     -----------------------------------*/
