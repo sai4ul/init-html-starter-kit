@@ -22459,7 +22459,7 @@ input[type=number] {
   transition: 0.5s;
 }
 .single-product .product-img .quick-action-buttons a {
-  background: rgba(var(--ot-primary-rgb), 0.5);
+  background: rgba(var(--primary-rgb), 0.5);
   border-radius: 6px;
   width: 26px;
   height: 26px;
@@ -22478,17 +22478,17 @@ input[type=number] {
   transition: 0.3s;
 }
 .single-product .product-img .quick-action-buttons a:hover {
-  background: var(--ot-primary);
+  background: var(--primary);
 }
 .single-product .cart-btn {
   -webkit-transition: all 0.4s ease-out 0s;
   transition: all 0.4s ease-out 0s;
-  border: 1px solid var(--ot-primary-border);
+  border: 1px solid var(--primary-border);
   padding: 7px 9px;
   font-size: 18px;
   border-radius: 0px;
   background: none;
-  color: var(--ot-primary-paragraph);
+  color: var(--primary-paragraph);
   line-height: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22499,7 +22499,7 @@ input[type=number] {
 }
 .single-product .cart-btn:hover {
   color: var(--white);
-  background: var(--ot-primary);
+  background: var(--primary);
   border: 1px solid transparent;
 }
 .single-product .btn-primary-outline {
@@ -22532,7 +22532,7 @@ input[type=number] {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   display: inline-block;
-  color: var(--ot-tertiary-title);
+  color: var(--tertiary-title);
   background: #e8e8e8;
   text-transform: capitalize;
   font-weight: 500;
@@ -22542,7 +22542,7 @@ input[type=number] {
   border-radius: 2px;
 }
 .file-type-tag:hover {
-  background: var(--ot-primary);
+  background: var(--primary);
   color: #fff;
 }
 
@@ -22560,7 +22560,7 @@ input[type=number] {
   }
   .grids-views.single-product .product-info-title {
     width: calc(73% - 26px);
-    border-right: 1px solid var(--ot-secondary-border);
+    border-right: 1px solid var(--secondary-border);
     margin-bottom: 0;
     padding-right: 11px;
   }
@@ -22618,11 +22618,11 @@ input[type=number] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid var(--ot-primary-border);
+  border: 1px solid var(--primary-border);
   border-radius: 4px;
   width: 85px;
   height: 34px;
-  border: 1px solid var(--ot-primary-border);
+  border: 1px solid var(--primary-border);
 }
 @media (max-width: 991px) {
   .tab-grid {
@@ -22634,14 +22634,14 @@ input[type=number] {
   width: 54px;
   height: 34px;
   background: none;
-  color: var(--ot-primary-paragraph);
+  color: var(--primary-paragraph);
   padding: 0px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   font-size: 22px;
   cursor: pointer;
   border: 0;
-  border-right: 1px solid var(--ot-primary-border);
+  border-right: 1px solid var(--primary-border);
 }
 @media (max-width: 991px) {
   .tab-grid button {
@@ -22654,10 +22654,10 @@ input[type=number] {
   border-right: 0;
 }
 .tab-grid button:hover {
-  color: var(--ot-primary);
+  color: var(--primary);
 }
 .tab-grid button.active {
-  color: var(--ot-primary);
+  color: var(--primary);
 }
 
 .slider-product-features .single {

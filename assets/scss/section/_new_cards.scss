@@ -33,7 +33,7 @@
             visibility: hidden;
             transition: .5s;
             a{
-                background: rgba(var(--ot-primary-rgb),.5);
+                background: rgba(var(--primary-rgb),.5);
                 border-radius: 6px;
                 width: 26px;
                 height: 26px;
@@ -44,25 +44,25 @@
                 color: #fff;
                 transition: .3s;
                 &:hover{
-                    background: var(--ot-primary);
+                    background: var(--primary);
                 }
             }
         }
     }
     .cart-btn{
         @include transition(.4s);
-        border: 1px solid var(--ot-primary-border);
+        border: 1px solid var(--primary-border);
         padding: 7px 9px;
         font-size: 18px;
         border-radius: 0px;
         background: none;
-        color: var(--ot-primary-paragraph);
+        color: var(--primary-paragraph);
         line-height: 1;
         display: flex;
         align-items: center;
         &:hover{
             color: var(--white);
-            background: var(--ot-primary);
+            background: var(--primary);
             border: 1px solid transparent;
         }
     }
@@ -97,7 +97,7 @@
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
     display: inline-block;
-    color: var(--ot-tertiary-title);
+    color: var(--tertiary-title);
     background: #e8e8e8;
     text-transform: capitalize;
     font-weight: 500;
@@ -106,7 +106,7 @@
     cursor: pointer;
     border-radius: 2px;
     &:hover {
-        background: var(--ot-primary);
+        background: var(--primary);
         color: #fff;
     }
 }
@@ -124,7 +124,7 @@
             padding: 20px;
             .product-info-title {
                 width: calc(73% - 26px);
-                border-right: 1px solid var(--ot-secondary-border);
+                border-right: 1px solid var(--secondary-border);
                 margin-bottom: 0;
                 padding-right: 11px;
             }
@@ -172,11 +172,11 @@
 // Tab & grid Button
 .tab-grid{
     display: flex;
-    border: 1px solid var(--ot-primary-border);
+    border: 1px solid var(--primary-border);
     border-radius: 4px;
     width: 85px;
     height: 34px;
-    border: 1px solid var(--ot-primary-border);
+    border: 1px solid var(--primary-border);
     @media #{$xs-to-md-max} {
         margin: 10px 0px;
         height: 38px;
@@ -185,13 +185,13 @@
         width: 54px;
         height: 34px;
         background: none;
-        color: var(--ot-primary-paragraph);
+        color: var(--primary-paragraph);
         padding: 0px;
         transition: 0.3s;
         font-size: 22px;
         cursor: pointer;
         border: 0;
-        border-right: 1px solid var(--ot-primary-border);
+        border-right: 1px solid var(--primary-border);
         @media #{$xs-to-md-max} {
           height: 38px;
           line-height: 25px;
@@ -201,11 +201,11 @@
           border-right: 0;
         }
         &:hover {
-          color: var(--ot-primary);
+          color: var(--primary);
         }
     }
     button.active {
-        color: var(--ot-primary);
+        color: var(--primary);
     }
 }
 
