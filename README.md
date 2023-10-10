@@ -35,8 +35,10 @@ If you need to write any javascript and query code then you write it in a file n
 ### 🛠 Team Card Components 50+
 
 <img src="./assets/images/Team_preview.png" width="100%" align="left"/>
+##
 
 ### 🛠 Services Card Components 20+
+##
 
 <img src="./assets/images/Services_preview.png" width="100%" align="left"/>
 
