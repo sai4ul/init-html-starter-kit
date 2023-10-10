@@ -3,7 +3,7 @@
 Starter Kit for Static Websites. SCSS support. Evato - `Themeforest - Codeanyon & colorLib ` These marketplaces have over 1000's of approved template web applications using this HTML starter kit so you can undoubtedly use. 
 <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank">Demo Live</a>
 
-### ⚡ Features
+### ? Features
 
 - SCSS Support
 - Support all Browsers
@@ -16,7 +16,7 @@ Starter Kit for Static Websites. SCSS support. Evato - `Themeforest - Codeanyon 
 - 10+ Table Style <a href="https://sai4ul.github.io/init-html-starter-kit/" target="_blank">Live</a>
 ##
 
-### 🛠 How to use 
+### ?? How to use 
 
 > No need any `command`. Index.html can start your design and you will be provided with an html file called `home-page.html` from here you can use components and sections and many free card designs that you can easily design with.
 
@@ -30,21 +30,17 @@ If you don't want to use SASS, you can write your CSS code at `main-style.css`.I
 > js/jQuery - 
 If you need to write any javascript and query code then you write it in a file named `main.js` <a href="https://prnt.sc/oT5iDaWlEWL8" target="_blank">screenShot</a>
 
-##
+## 
 
-### 🛠 Team Card Components 50+
-
+### ?? Team Card Components 50+
 <img src="./assets/images/Team_preview.png" width="100%" align="left"/>
-#
 
-### 🛠 Services Card Components 20+
-##
-
+### &nbsp;
+### ?? Services Card Components 20+
 <img src="./assets/images/Services_preview.png" width="100%" align="left"/>
-#
 
-
-### 🚀 Defendance - Library / Framework / Plugin
+### &nbsp;
+### ?? Defendance - Library / Framework / Plugin
 
 <table>
   <thead align="center">
@@ -108,7 +104,7 @@ If you need to write any javascript and query code then you write it in a file n
   </tbody>
 </table>
 
-### Creator 😄
+### Creator ??
 
 Its <a href="https://sai4ul.com" target="_blank"> sai4ule</a>, Front-end Developer.
 Dhaka , Bangladesh
