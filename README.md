@@ -32,21 +32,21 @@ If you need to write any javascript and query code then you write it in a file n
 
 ## 
 
-### ?? Team Card Components 50+
+### ?? Team Card Components 50+ <a href="https://sai4ul.github.io/init-html-starter-kit/componet.html/" target="_blank">Live</a>
 <img src="./assets/images/Team_preview.png" width="100%" align="left"/>
 
 ### &nbsp;
-### ?? Services Card Components 20+
+### ?? Services Card Components 20+ <a href="https://sai4ul.github.io/init-html-starter-kit/services-card.html/" target="_blank">Live</a>
 <img src="./assets/images/Services_preview.png" width="100%" align="left"/>
 
 ### &nbsp;
-### Product Card 20+
+### Product Card 20+ <a href="https://sai4ul.github.io/init-html-starter-kit/product-card.html" target="_blank">Live</a>
 <img src="./assets/images/product_card.png" width="100%" align="left"/>
 <img src="./assets/images/product_card3.png" width="100%" align="left"/>
 <img src="./assets/images/product_card2.png" width="100%" align="left"/>
 
 ### &nbsp;
-### Blog Card 10+
+### Blog Card 10+ <a href="https://sai4ul.github.io/init-html-starter-kit/blog.html" target="_blank">Live</a>
 <img src="./assets/images/blog.png" width="100%" align="left"/>
 
 ### &nbsp;
