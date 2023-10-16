@@ -32,11 +32,11 @@ If you need to write any javascript and query code then you write it in a file n
 
 ## 
 
-### ?? Team Card Components 50+ <a href="https://sai4ul.github.io/init-html-starter-kit/componet.html/" target="_blank">Live</a>
+### ?? Team Card Components 50+ <a href="https://sai4ul.github.io/init-html-starter-kit/componet.html" target="_blank">Live</a>
 <img src="./assets/images/Team_preview.png" width="100%" align="left"/>
 
 ### &nbsp;
-### ?? Services Card Components 20+ <a href="https://sai4ul.github.io/init-html-starter-kit/services-card.html/" target="_blank">Live</a>
+### ?? Services Card Components 20+ <a href="https://sai4ul.github.io/init-html-starter-kit/services-card.html" target="_blank">Live</a>
 <img src="./assets/images/Services_preview.png" width="100%" align="left"/>
 
 ### &nbsp;
