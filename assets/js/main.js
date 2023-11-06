@@ -5,8 +5,7 @@
     @version  :	1.0.0
     @author   : sai4ul
     @url 	  : https://github.com/sai4ul/init-html-starter-kit
-    
-                    
+            
     :: Data-background               
     :: slick Nav                      
     :: Sticky And Scroll Up           
@@ -62,7 +61,7 @@
         }
         updateProgress();
         $(window).scroll(updateProgress);	
-        var offset = 50;
+        var offset = 40;
         var duration = 550;
         jQuery(window).on('scroll', function() {
         if (jQuery(this).scrollTop() > offset) {
@@ -92,7 +91,6 @@
     };
 
 
-
   /*-----------------------------------
     Tab & Grid View Button color active
   -----------------------------------*/
@@ -104,12 +102,12 @@
     Tab vew & grid Vew Content
     -----------------------------------*/
     $(document).on("click", ".grid-view", function (){
-        $(this).parent().parent().parent().parent().parent().parent().parent().find(".view-wrapper").addClass("col-xl-12").removeClass("col-xl-4 col-lg-6 col-md-6 col-sm-12");
-        $(this).parent().parent().parent().parent().parent().parent().parent().parent().find(".single-product").addClass("grids-views");
+        $(this).parent().parent().parent().parent().parent().parent().parent().find(".view-wrapper ").addClass("col-xl-12").removeClass("col-xl-4 col-lg-6 col-md-6 col-sm-12 ");
+        $(this).parent().parent().parent().parent().parent().parent().parent().parent().find(".single-product ").addClass("grids-views");
     });
     $(document).on("click", ".tab-view", function (){
-        $(this).parent().parent().parent().parent().parent().parent().parent().find(".view-wrapper").removeClass("col-xl-12").addClass("col-xl-4 col-lg-6 col-md-6 col-sm-12");
-        $(this).parent().parent().parent().parent().parent().parent().parent().parent().find(".single-product").removeClass("grids-views");
+        $(this).parent().parent().parent().parent().parent().parent().parent().find(".view-wrapper ").removeClass("col-xl-12").addClass("col-xl-4 col-lg-6 col-md-6 col-sm-12");
+        $(this).parent().parent().parent().parent().parent().parent().parent().parent().find(".single-product ").removeClass("grids-views");
     });
 
 
