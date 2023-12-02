@@ -22664,6 +22664,163 @@ input[type=number] {
   width: 95%;
 }
 
+.single-feature {
+  padding: 26px 21px;
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  border-radius: 8px;
+  margin: 4px 0px;
+  display: block;
+  background: var(--section-bg-one);
+  cursor: pointer;
+  border: 1px solid #E7E7E7;
+  padding-bottom: 20px;
+}
+@media (max-width: 575px) {
+  .single-feature {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+.single-feature .color-line {
+  -webkit-clip-path: polygon(94.67% 17.75%, 0px 3%, -4px 38%);
+          clip-path: polygon(94.67% 17.75%, 0px 3%, -4px 38%);
+  width: 70%;
+  height: 21px;
+}
+.single-feature .sticker {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 2px 9px;
+  border-radius: 4px;
+  position: relative;
+  z-index: 0;
+}
+.single-feature .sticker::before {
+  position: absolute;
+  content: " ";
+  -webkit-transform: skew(-14deg);
+          transform: skew(-14deg);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+}
+.single-feature .cat-caption .title {
+  font-size: 24px;
+  text-transform: capitalize;
+  margin-bottom: 24px;
+}
+@media (max-width: 575px) {
+  .single-feature .cat-caption .title {
+    font-size: 18px;
+  }
+}
+.single-feature .cat-caption .pear {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 0px;
+  line-height: 1.5;
+}
+.single-feature:hover {
+  cursor: pointer;
+}
+
+.feature-color-one .color-line, .feature-area .col-xl-6:nth-child(1) .single-feature .color-line, .feature-area .col-xl-3:nth-child(1) .single-feature .color-line {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,5b58ff+0,5b58ff+100,7db9e8+100&1+0,0+100 */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(rgb(91, 88, 255)), to(rgba(125, 185, 232, 0)));
+  background: linear-gradient(to right, rgb(91, 88, 255) 0%, rgba(125, 185, 232, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#5b58ff", endColorstr="#007db9e8",GradientType=1 ); /* IE6-9 */
+}
+.feature-color-one .sticker::before, .feature-area .col-xl-6:nth-child(1) .single-feature .sticker::before, .feature-area .col-xl-3:nth-child(1) .single-feature .sticker::before {
+  background-color: #4F4DEF;
+}
+.feature-color-one:hover, .feature-area .col-xl-6:nth-child(1) .single-feature:hover, .feature-area .col-xl-3:nth-child(1) .single-feature:hover {
+  border-color: #4F4DEF;
+}
+
+.feature-color-two .color-line, .feature-area .col-xl-6:nth-child(11) .single-feature .color-line, .feature-area .col-xl-3:nth-child(11) .single-feature .color-line, .feature-area .col-xl-6:nth-child(2) .single-feature .color-line, .feature-area .col-xl-3:nth-child(2) .single-feature .color-line {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,ef3220+0,ef3220+100,7db9e8+100&1+0,0+100 */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(rgb(239, 50, 32)), to(rgba(125, 185, 232, 0)));
+  background: linear-gradient(to right, rgb(239, 50, 32) 0%, rgba(125, 185, 232, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ef3220", endColorstr="#007db9e8",GradientType=1 ); /* IE6-9 */
+}
+.feature-color-two .sticker::before, .feature-area .col-xl-6:nth-child(11) .single-feature .sticker::before, .feature-area .col-xl-3:nth-child(11) .single-feature .sticker::before, .feature-area .col-xl-6:nth-child(2) .single-feature .sticker::before, .feature-area .col-xl-3:nth-child(2) .single-feature .sticker::before {
+  background-color: #EF3220;
+}
+.feature-color-two:hover, .feature-area .col-xl-6:nth-child(11) .single-feature:hover, .feature-area .col-xl-3:nth-child(11) .single-feature:hover, .feature-area .col-xl-6:nth-child(2) .single-feature:hover, .feature-area .col-xl-3:nth-child(2) .single-feature:hover {
+  border-color: #EF3220;
+}
+
+.feature-color-three .color-line, .feature-area .col-xl-6:nth-child(9).single-feature .color-line, .feature-area .col-xl-3:nth-child(9) .single-feature .color-line, .feature-area .col-xl-6:nth-child(3) .single-feature .color-line, .feature-area .col-xl-3:nth-child(3) .single-feature .color-line {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,20ef35+0,20ef35+100,7db9e8+100&1+0,0+100 */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(rgb(32, 239, 53)), to(rgba(125, 185, 232, 0)));
+  background: linear-gradient(to right, rgb(32, 239, 53) 0%, rgba(125, 185, 232, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#20ef35", endColorstr="#007db9e8",GradientType=1 ); /* IE6-9 */
+}
+.feature-color-three .sticker::before, .feature-area .col-xl-6:nth-child(9).single-feature .sticker::before, .feature-area .col-xl-3:nth-child(9) .single-feature .sticker::before, .feature-area .col-xl-6:nth-child(3) .single-feature .sticker::before, .feature-area .col-xl-3:nth-child(3) .single-feature .sticker::before {
+  background-color: #09DC1E;
+}
+.feature-color-three:hover, .feature-area .col-xl-6.single-feature:hover:nth-child(9), .feature-area .col-xl-3:nth-child(9) .single-feature:hover, .feature-area .col-xl-6:nth-child(3) .single-feature:hover, .feature-area .col-xl-3:nth-child(3) .single-feature:hover {
+  border-color: #09DC1E;
+}
+
+.feature-color-four .color-line, .feature-area .col-xl-6:nth-child(10) .single-feature .color-line, .feature-area .col-xl-3:nth-child(10) .single-feature .color-line, .feature-area .col-xl-6:nth-child(4) .single-feature .color-line, .feature-area .col-xl-3:nth-child(4) .single-feature .color-line {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,001aff+0,001aff+100,7db9e8+100&1+0,0+100 */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(rgb(0, 26, 255)), to(rgba(125, 185, 232, 0)));
+  background: linear-gradient(to right, rgb(0, 26, 255) 0%, rgba(125, 185, 232, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#001aff", endColorstr="#007db9e8",GradientType=1 ); /* IE6-9 */
+}
+.feature-color-four .sticker::before, .feature-area .col-xl-6:nth-child(10) .single-feature .sticker::before, .feature-area .col-xl-3:nth-child(10) .single-feature .sticker::before, .feature-area .col-xl-6:nth-child(4) .single-feature .sticker::before, .feature-area .col-xl-3:nth-child(4) .single-feature .sticker::before {
+  background-color: #021BFF;
+}
+.feature-color-four:hover, .feature-area .col-xl-6:nth-child(10) .single-feature:hover, .feature-area .col-xl-3:nth-child(10) .single-feature:hover, .feature-area .col-xl-6:nth-child(4) .single-feature:hover, .feature-area .col-xl-3:nth-child(4) .single-feature:hover {
+  border-color: #021BFF;
+}
+
+.feature-color-five .color-line, .feature-area .col-xl-6:nth-child(8) .single-feature .color-line, .feature-area .col-xl-3:nth-child(8) .single-feature .color-line, .feature-area .col-xl-6:nth-child(5) .single-feature .color-line, .feature-area .col-xl-3:nth-child(5) .single-feature .color-line {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,0bdfc6+0,0bdfc6+100,7db9e8+100&1+0,0+100 */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(rgb(11, 223, 198)), to(rgba(125, 185, 232, 0)));
+  background: linear-gradient(to right, rgb(11, 223, 198) 0%, rgba(125, 185, 232, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#0bdfc6", endColorstr="#007db9e8",GradientType=1 ); /* IE6-9 */
+}
+.feature-color-five .sticker::before, .feature-area .col-xl-6:nth-child(8) .single-feature .sticker::before, .feature-area .col-xl-3:nth-child(8) .single-feature .sticker::before, .feature-area .col-xl-6:nth-child(5) .single-feature .sticker::before, .feature-area .col-xl-3:nth-child(5) .single-feature .sticker::before {
+  background-color: #0BDFC6;
+}
+.feature-color-five:hover, .feature-area .col-xl-6:nth-child(8) .single-feature:hover, .feature-area .col-xl-3:nth-child(8) .single-feature:hover, .feature-area .col-xl-6:nth-child(5) .single-feature:hover, .feature-area .col-xl-3:nth-child(5) .single-feature:hover {
+  border-color: #0BDFC6;
+}
+
+.feature-color-six .color-line, .feature-area .col-xl-6:nth-child(6) .single-feature .color-line, .feature-area .col-xl-3:nth-child(6) .single-feature .color-line {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,eb20ef+0,eb20ef+100,7db9e8+100&1+0,0+100 */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(rgb(235, 32, 239)), to(rgba(125, 185, 232, 0)));
+  background: linear-gradient(to right, rgb(235, 32, 239) 0%, rgba(125, 185, 232, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#eb20ef", endColorstr="#007db9e8",GradientType=1 ); /* IE6-9 */
+}
+.feature-color-six .sticker::before, .feature-area .col-xl-6:nth-child(6) .single-feature .sticker::before, .feature-area .col-xl-3:nth-child(6) .single-feature .sticker::before {
+  background-color: #EB20EF;
+}
+.feature-color-six:hover, .feature-area .col-xl-6:nth-child(6) .single-feature:hover, .feature-area .col-xl-3:nth-child(6) .single-feature:hover {
+  border-color: #EB20EF;
+}
+
+.feature-color-seven .color-line, .feature-area .col-xl-6:nth-child(12) .single-feature .color-line, .feature-area .col-xl-3:nth-child(12) .single-feature .color-line, .feature-area .col-xl-6:nth-child(7) .single-feature .color-line, .feature-area .col-xl-3:nth-child(7) .single-feature .color-line {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,ff9900+0,ff9900+100,7db9e8+100&1+0,0+100 */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(rgb(255, 153, 0)), to(rgba(125, 185, 232, 0)));
+  background: linear-gradient(to right, rgb(255, 153, 0) 0%, rgba(125, 185, 232, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ff9900", endColorstr="#007db9e8",GradientType=1 ); /* IE6-9 */
+}
+.feature-color-seven .sticker::before, .feature-area .col-xl-6:nth-child(12) .single-feature .sticker::before, .feature-area .col-xl-3:nth-child(12) .single-feature .sticker::before, .feature-area .col-xl-6:nth-child(7) .single-feature .sticker::before, .feature-area .col-xl-3:nth-child(7) .single-feature .sticker::before {
+  background-color: #FF9900;
+}
+.feature-color-seven:hover, .feature-area .col-xl-6:nth-child(12) .single-feature:hover, .feature-area .col-xl-3:nth-child(12) .single-feature:hover, .feature-area .col-xl-6:nth-child(7) .single-feature:hover, .feature-area .col-xl-3:nth-child(7) .single-feature:hover {
+  border-color: #FF9900;
+}
+
 /*----------------------------------------------
     Index Of Blog cards
 ------------------------------------------------
