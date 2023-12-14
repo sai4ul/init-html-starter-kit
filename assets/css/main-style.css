@@ -22821,6 +22821,93 @@ input[type=number] {
   border-color: #FF9900;
 }
 
+.new-2023 .new-card-img img {
+  max-width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.new-2023 .new-card {
+  padding: 3.5em 2em 2em;
+  background: #fff;
+  -webkit-box-shadow: 5px 7px 17px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 7px 17px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.new-2023 .new-card .rectangle {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  -webkit-transform: translatex(-50%);
+          transform: translatex(-50%);
+  width: 50px;
+  background: #e8e8e8;
+  height: 10px;
+  display: block;
+  border-radius: 50px;
+}
+.new-2023 .new-card-content {
+  padding-top: 7.2em;
+}
+.new-2023 .new-card-content h2 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.35em;
+  font-weight: 700;
+}
+.new-2023 .new-card-content p {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+.new-2023 .new-card-img {
+  position: relative;
+}
+.new-2023 .new-card-img-overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+.new-2023 .new-card-img-overlay p {
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 0.9em;
+  text-align: center;
+  position: relative;
+  top: 100%;
+  min-width: 85px;
+  min-height: 85px;
+  word-wrap: break-word;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.new-2023 .new-card:nth-child(1) .new-card-img-overlay {
+  background: #056f6a;
+  /* The Fallback */
+  background: rgba(5, 111, 106, 0.5);
+}
+.new-2023 .new-card:nth-child(1) .new-card-img-overlay p {
+  background: #056f6a;
+  /* The Fallback */
+  background: #056f6a;
+}
+.new-2023 .new-card:nth-child(2) .new-card-img-overlay {
+  background: #b37399;
+  /* The Fallback */
+  background: rgba(179, 115, 153, 0.5);
+}
+.new-2023 .new-card:nth-child(2) .new-card-img-overlay p {
+  background: #b37399;
+  /* The Fallback */
+  background: #b37399;
+}
+
 /*----------------------------------------------
     Index Of Blog cards
 ------------------------------------------------
