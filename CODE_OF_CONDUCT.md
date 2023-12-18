@@ -76,6 +76,7 @@ the consequences for any action they deem in violation of this Code of Conduct:
 **Community Impact**: Use of inappropriate language or other behavior deemed
 unprofessional or unwelcome in the community.
 
+
 **Consequence**: A private, written warning from community leaders, providing
 clarity around the nature of the violation and an explanation of why the
 behavior was inappropriate. A public apology may be requested.
@@ -84,6 +85,7 @@ behavior was inappropriate. A public apology may be requested.
 
 **Community Impact**: A violation through a single incident or series
 of actions.
+
 
 **Consequence**: A warning with consequences for continued behavior. No
 interaction with the people involved, including unsolicited interaction with
@@ -96,6 +98,7 @@ permanent ban.
 
 **Community Impact**: A serious violation of community standards, including
 sustained inappropriate behavior.
+
 
 **Consequence**: A temporary ban from any sort of interaction or public
 communication with the community for a specified period of time. No public or
@@ -126,3 +129,7 @@ enforcement ladder](https://github.com/mozilla/diversity).
 For answers to common questions about this code of conduct, see the FAQ at
 https://www.contributor-covenant.org/faq. Translations are available at
 https://www.contributor-covenant.org/translations.
+
+
+
+
