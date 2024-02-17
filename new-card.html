@@ -1,784 +1,1100 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content=" ">
-    <meta name="keywords" content=" ">
-	<meta name="author" content="sai4ul">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="author" content="sai4ul">
-	<meta property="og:type" content="website" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content=" " />
+    <meta name="keywords" content=" " />
+    <meta name="author" content="sai4ul" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="sai4ul" />
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="html starter kit" />
     <meta property="og:site_name" content="starker kit" />
     <meta property="og:url" content="https://sai4ul.com" />
     <meta property="og:image" content="https://sai4ul.com/images/selfie.jpg" />
-    <meta property="og:description" content="front-end Developer, react.js Developer, next.js Developer, bootstrap, tailwind" />
+    <meta
+      property="og:description"
+      content="front-end Developer, react.js Developer, next.js Developer, bootstrap, tailwind"
+    />
     <meta name="twitter:title" content="saiful islam" />
-    <meta name="twitter:description" content="front-end Developer, react.js Developer, next.js Developer, bootstrap, tailwind" />
+    <meta
+      name="twitter:description"
+      content="front-end Developer, react.js Developer, next.js Developer, bootstrap, tailwind"
+    />
     <meta name="twitter:image" content="https://twitter.com/sai4ul/photo" />
     <meta name="twitter:card" content="summary" />
-		
-	<meta name="google-site-verification" content="..." />
+
+    <meta name="google-site-verification" content="..." />
     <meta name="facebook-domain-verification" content="..." />
-    <meta name="csrf-token" content="...">
-	<meta name="currency" content="$">
-	
-	<title>init-kit - HTML starter kit </title>
-    <link rel="icon" type="image/x-icon" sizes="20x20" href="assets/images/icon/favicon.png">
+    <meta name="csrf-token" content="..." />
+    <meta name="currency" content="$" />
+
+    <title>init-kit - HTML starter kit</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="20x20"
+      href="assets/images/icon/favicon.png"
+    />
     <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-5.3.0.min.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/bootstrap-5.3.0.min.css"
+    />
     <!-- fonts & icon -->
-    <link rel="stylesheet" type="text/css" href="assets/css/fonts-icon.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/fonts-icon.css" />
     <!-- Plugin -->
-    <link rel="stylesheet" type="text/css" href="assets/css/plugin.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/plugin.css" />
     <!-- Main CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
-</head>
+    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css" />
+  </head>
 
-<style>
-
-
-#hexGrid {
-  display: flex;
-  flex-wrap: wrap;
-  width: 90%;
-  margin: 0 auto;
-  overflow: hidden;
-  font-family: sans-serif;
-  list-style-type: none;
-}
-
-.hex {
-  position: relative;
-  visibility:hidden;
-  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
-  transition: all 0.5s;
-  backface-visibility: hidden;
-  will-change: transform;
-  transition: all 0.5s;
-}
-.hex::after{
-  content:'';
-  display:block;
-  padding-bottom: 86.602%;  /* =  100 / tan(60) * 1.5 */
-}
-.hexIn{
-  position: absolute;
-  width:96%;
-  padding-bottom: 110.851%; /* =  width / sin(60) */
-  margin: 2%;
-  overflow: hidden;
-  visibility: hidden;
-  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
-  -webkit-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
-      -ms-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
-          transform: rotate3d(0,0,1,-60deg) skewY(30deg);
-    transition: all 0.5s;
-}
-.hexIn * {
-  position: absolute;
-  visibility: visible;
-  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
-}
-.hexLink {
-    display:block;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    color: #fff;
-    overflow: hidden;
-    -webkit-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
-        -ms-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
-            transform: skewY(-30deg) rotate3d(0,0,1,60deg);
-}
-
-
-
-
-/*** HEX CONTENT **********************************************************************/
-.hex img {
-  left: -100%;
-  right: -100%;
-  width: auto;
-  height: 100%;
-  margin: 0 auto;
-}
-
-.hex h1, .hex p {
-  width: 100%;
-  padding: 5%;
-  box-sizing:border-box;
-  font-weight: 400;
-  opacity: 0;
-}
-
-#demo1 {
-  color: #F5CE95;
-  text-transform: capitalize;
-    text-align: center;
-  bottom: 50%;
-  padding-top:50%;
-  font-size: 1.5em;
-  z-index: 1;
-}
-.hex h1:before, .hex h1:after {
-  display: inline-block;
-  margin: 0 0.5em;
-  width: 0.25em;
-  height: 0.03em;
-  background: #ffffff;
-  content: '';
-  vertical-align: middle;
-  transition: all 0.3s;
-  text-align:center;
-}
-
-#demo2 {
-top: 50%;
-text-align: center;
-text-transform: uppercase;
-    
-}
-
-.img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-position: center center;
-  background-size: cover;
-  overflow: hidden;
--webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-}
-
-.img:before, .img:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: '';
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-.img:before {
-  background: rgba(22, 103, 137, 0.3)
-}
-.img:after {
-  background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.5), transparent);
-}
-
-/*** HOVER EFFECT  **********************************************************************/
-
-
-
-.hexLink:hover h1, .hexLink:focus h1,
-.hexLink:hover p, .hexLink:focus p{
-opacity:1;
-transition: 0.8s;
-}
-
-
-.hexIn:hover .img:before,
-.hexIn:hover .img:after,
-.hexIn:hover .hexLink {
-  opacity: 1;
-}
-
-
-/*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
-@media (min-width:1201px) { /* <- 5-4  hexagons per row */
-  #hexGrid{
-    padding-bottom: 4.4%
-  }
-  .hex {
-    width: 20%; /* = 100 / 5 */
-  }
-  .hex:nth-child(9n+6){ /* first hexagon of even rows */
-    margin-left:10%;  /* = width of .hex / 2  to indent even rows */
-  }
-}
-
-@media (max-width: 1200px) and (min-width:901px) { /* <- 4-3  hexagons per row */
-  #hexGrid{
-    padding-bottom: 5.5%;
-    font-size: 13px;
-  }
-  .hex {
-    width: 25%; /* = 100 / 4 */
-  }
-  .hex:nth-child(7n+5){ /* first hexagon of even rows */
-    margin-left:12.5%;  /* = width of .hex / 2  to indent even rows */
-  }
-}
-
-@media (max-width: 900px) and (min-width:601px) { /* <- 3-2  hexagons per row */
-  #hexGrid{
-    padding-bottom: 7.4%;
-    font-size: 14px;
-  }
-  .hex {
-    width: 33.333%; /* = 100 / 3 */
-  }
-  .hex:nth-child(5n+4){ /* first hexagon of even rows */
-    margin-left:16.666%;  /* = width of .hex / 2  to indent even rows */
-  }
-}
-
-@media (max-width: 600px) { /* <- 2-1  hexagons per row */
-  #hexGrid{
-    padding-bottom: 11.2%;
-    font-size: 12px;
-  }
-  .hex {
-    width: 50%; /* = 100 / 3 */
-  }
-  .hex:nth-child(3n+3){ /* first hexagon of even rows */
-    margin-left:25%;  /* = width of .hex / 2  to indent even rows */
-  }
-}
-
-@media (max-width: 400px) {
+  <style>
     #hexGrid {
-        font-size: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      width: 90%;
+      margin: 0 auto;
+      overflow: hidden;
+      font-family: sans-serif;
+      list-style-type: none;
     }
-  
 
-  
- 
-}
+    .hex {
+      position: relative;
+      visibility: hidden;
+      outline: 1px solid transparent; /* fix for jagged edges in FF on hover transition */
+      transition: all 0.5s;
+      backface-visibility: hidden;
+      will-change: transform;
+      transition: all 0.5s;
+    }
+    .hex::after {
+      content: "";
+      display: block;
+      padding-bottom: 86.602%; /* =  100 / tan(60) * 1.5 */
+    }
+    .hexIn {
+      position: absolute;
+      width: 96%;
+      padding-bottom: 110.851%; /* =  width / sin(60) */
+      margin: 2%;
+      overflow: hidden;
+      visibility: hidden;
+      outline: 1px solid transparent; /* fix for jagged edges in FF on hover transition */
+      -webkit-transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
+      -ms-transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
+      transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
+      transition: all 0.5s;
+    }
+    .hexIn * {
+      position: absolute;
+      visibility: visible;
+      outline: 1px solid transparent; /* fix for jagged edges in FF on hover transition */
+    }
+    .hexLink {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+      -webkit-transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
+      -ms-transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
+      transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
+    }
 
+    /*** HEX CONTENT **********************************************************************/
+    .hex img {
+      left: -100%;
+      right: -100%;
+      width: auto;
+      height: 100%;
+      margin: 0 auto;
+    }
 
+    .hex h1,
+    .hex p {
+      width: 100%;
+      padding: 5%;
+      box-sizing: border-box;
+      font-weight: 400;
+      opacity: 0;
+    }
 
+    #demo1 {
+      color: #f5ce95;
+      text-transform: capitalize;
+      text-align: center;
+      bottom: 50%;
+      padding-top: 50%;
+      font-size: 1.5em;
+      z-index: 1;
+    }
+    .hex h1:before,
+    .hex h1:after {
+      display: inline-block;
+      margin: 0 0.5em;
+      width: 0.25em;
+      height: 0.03em;
+      background: #ffffff;
+      content: "";
+      vertical-align: middle;
+      transition: all 0.3s;
+      text-align: center;
+    }
 
-</style>
+    #demo2 {
+      top: 50%;
+      text-align: center;
+      text-transform: uppercase;
+    }
 
-<body>
+    .img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-position: center center;
+      background-size: cover;
+      overflow: hidden;
+      -webkit-clip-path: polygon(
+        50% 0%,
+        100% 25%,
+        100% 75%,
+        50% 100%,
+        0% 75%,
+        0% 25%
+      );
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .img:before,
+    .img:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+    .img:before {
+      background: rgba(22, 103, 137, 0.3);
+    }
+    .img:after {
+      background: linear-gradient(
+        to top,
+        transparent,
+        rgba(0, 0, 0, 0.5),
+        transparent
+      );
+    }
+
+    /*** HOVER EFFECT  **********************************************************************/
+
+    .hexLink:hover h1,
+    .hexLink:focus h1,
+    .hexLink:hover p,
+    .hexLink:focus p {
+      opacity: 1;
+      transition: 0.8s;
+    }
+
+    .hexIn:hover .img:before,
+    .hexIn:hover .img:after,
+    .hexIn:hover .hexLink {
+      opacity: 1;
+    }
+
+    /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
+    @media (min-width: 1201px) {
+      /* <- 5-4  hexagons per row */
+      #hexGrid {
+        padding-bottom: 4.4%;
+      }
+      .hex {
+        width: 20%; /* = 100 / 5 */
+      }
+      .hex:nth-child(9n + 6) {
+        /* first hexagon of even rows */
+        margin-left: 10%; /* = width of .hex / 2  to indent even rows */
+      }
+    }
+
+    @media (max-width: 1200px) and (min-width: 901px) {
+      /* <- 4-3  hexagons per row */
+      #hexGrid {
+        padding-bottom: 5.5%;
+        font-size: 13px;
+      }
+      .hex {
+        width: 25%; /* = 100 / 4 */
+      }
+      .hex:nth-child(7n + 5) {
+        /* first hexagon of even rows */
+        margin-left: 12.5%; /* = width of .hex / 2  to indent even rows */
+      }
+    }
+
+    @media (max-width: 900px) and (min-width: 601px) {
+      /* <- 3-2  hexagons per row */
+      #hexGrid {
+        padding-bottom: 7.4%;
+        font-size: 14px;
+      }
+      .hex {
+        width: 33.333%; /* = 100 / 3 */
+      }
+      .hex:nth-child(5n + 4) {
+        /* first hexagon of even rows */
+        margin-left: 16.666%; /* = width of .hex / 2  to indent even rows */
+      }
+    }
+
+    @media (max-width: 600px) {
+      /* <- 2-1  hexagons per row */
+      #hexGrid {
+        padding-bottom: 11.2%;
+        font-size: 12px;
+      }
+      .hex {
+        width: 50%; /* = 100 / 3 */
+      }
+      .hex:nth-child(3n + 3) {
+        /* first hexagon of even rows */
+        margin-left: 25%; /* = width of .hex / 2  to indent even rows */
+      }
+    }
+
+    @media (max-width: 400px) {
+      #hexGrid {
+        font-size: 8px;
+      }
+    }
+  </style>
+
+  <body>
     <header>
-        <div class="header-area">
-            <div class="main-header">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <!-- Logo -->
-                        <div class="col-xl-2 col-lg-2">
-                            <div class="logo">
-                                <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo"></a>
-                            </div>
-                        </div>
-                        <div class="col-xl-10 col-lg-10">
-                            <div class="menu-wrapper  d-flex align-items-center justify-content-end">
-                                <!-- Main-menu -->
-                                <div class="main-menu d-none d-lg-block">
-                                    <nav>
-                                        <ul class="listing" id="navigation">
-                                            <li class="single-list"><a href="componet.html" class="single">components</a></li>
-                                            <li class="single-list"><a href="#" class="single">free cards</a>
-                                                <ul class="listing submenu">
-                                                    <li class="single-list"><a href="componet.html#product-card" class="single">porduct card</a></li>
-                                                    <li class="single-list"><a href="componet.html#team-card" class="single">team card</a></li>
-                                                    <li class="single-list"><a href="componet.html#services-card" class="single"> services card</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="single-list"><a href="doc.html" class="single">Doc</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div> 
-                        <!-- Mobile Menu -->
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
-                        </div>
-                    </div>
+      <div class="header-area">
+        <div class="main-header">
+          <div class="container">
+            <div class="row align-items-center">
+              <!-- Logo -->
+              <div class="col-xl-2 col-lg-2">
+                <div class="logo">
+                  <a href="index.html"
+                    ><img src="assets/images/logo/logo.png" alt="logo"
+                  /></a>
                 </div>
+              </div>
+              <div class="col-xl-10 col-lg-10">
+                <div
+                  class="menu-wrapper d-flex align-items-center justify-content-end"
+                >
+                  <!-- Main-menu -->
+                  <div class="main-menu d-none d-lg-block">
+                    <nav>
+                      <ul class="listing" id="navigation">
+                        <li class="single-list">
+                          <a href="componet.html" class="single">components</a>
+                        </li>
+                        <li class="single-list">
+                          <a href="#" class="single">free cards</a>
+                          <ul class="listing submenu">
+                            <li class="single-list">
+                              <a
+                                href="componet.html#product-card"
+                                class="single"
+                                >porduct card</a
+                              >
+                            </li>
+                            <li class="single-list">
+                              <a href="componet.html#team-card" class="single"
+                                >team card</a
+                              >
+                            </li>
+                            <li class="single-list">
+                              <a
+                                href="componet.html#services-card"
+                                class="single"
+                              >
+                                services card</a
+                              >
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="single-list">
+                          <a href="doc.html" class="single">Doc</a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <!-- Mobile Menu -->
+              <div class="col-12">
+                <div class="mobile_menu d-block d-lg-none"></div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </header>
     <main>
-	
-        <!-- slider-area S t a r t -->
-        <section class="sliderArea section-bg-two">
-            <div class="single-slider slider-height2 d-flex align-items-center" >
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xxl-12">
-                            <div class="slider-content slider-content2 text-center">
-                                <h1 class="title text-white wow fadeInUp" data-wow-delay="0.0s">New card component</h1>
-                                <p class="pera text-white wow fadeInUp" data-wow-delay="0.1s">10+ Style</p>
-                            </div>
-                        </div>
-                    </div>
+      <!-- slider-area S t a r t -->
+      <section class="sliderArea section-bg-two">
+        <div class="single-slider slider-height2 d-flex align-items-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-xxl-12">
+                <div class="slider-content slider-content2 text-center">
+                  <h1
+                    class="title text-white wow fadeInUp"
+                    data-wow-delay="0.0s"
+                  >
+                    New card component
+                  </h1>
+                  <p class="pera text-white wow fadeInUp" data-wow-delay="0.1s">
+                    10+ Style
+                  </p>
                 </div>
+              </div>
             </div>
-        </section>
-        <!-- End-of slider -->
-        <!-- Tab Button S t a r t -->
-        <div class="buttons-cards gap-10 mt-50">
-            <a href="componet.html" class="btn-primary-fill">Team</a>
-            <a href="services-card.html" class="btn-primary-fill">Services</a>
-            <a href="product-card.html" class="btn-primary-fill">product card</a>
-            <a href="table.html" class="btn-primary-fill">Table</a>
-            <a href="new-card.html" class="btn-primary-fill">new card</a>
-            <a href="blog.html" class="btn-primary-fill">Blog</a>
+          </div>
         </div>
-        <!-- End-of Tab Button -->
+      </section>
 
-        <div class="container pt-50 pb-50 mb-100">
-		    <div class="grid">
-			<ul id="hexGrid">
-			  <li class="hex">
-				<div class="hexIn">
-				  <a class="hexLink" href="#">
-					<div class='img' style='background-image:url(https://images.unsplash.com/photo-1417436026361-a033044d901f?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=faa4e192f33e0d6b7ce0e54f15140e42);'></div>
-					<h1 id="demo1">This is a title</h1>
-					<p id="demo2">Some sample text about the article this hexagon leads to</p>
-				  </a>
-				</div>
-			  </li>
-				
-			  <li class="hex">
-				<div class="hexIn">
-				  <a class="hexLink" href="#">
-						<div class='img' style='background-image: url(https://images.unsplash.com/44/MIbCzcvxQdahamZSNQ26_12082014-IMG_3526.jpg?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=49dab7a5e4b2e28b5707bc2db974c94b);'></div>
-					<h1 id="demo1">This is a title</h1>
-					<p id="demo2">Some sample text about the article this hexagon leads to</p>
-				  </a>
-				</div>
-			  </li>
-			  <li class="hex">
-				<div class="hexIn">
-				  <a class="hexLink" href="#">
-					<div class='img' style='background-image: url(https://images.unsplash.com/photo-1425668273332-3a46ab26b161?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=d453ab3dec298c43415526458b360fa6);'></div>
-					<h1 id="demo1">This is a title</h1>
-					<p id="demo2">Some sample text about the article this hexagon leads to</p>
-				  </a>
-				</div>
-			  </li>
-			  <li class="hex">
-				<div class="hexIn">
-				  <a class="hexLink" href="#">
-					<div class='img' style='background-image: url(https://images.unsplash.com/photo-1423145369430-a9ea0de096cd?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
-					<h1 id="demo1">This is a title</h1>
-					<p id="demo2">Some sample text about the article this hexagon leads to</p>
-				  </a>
-				</div>
-			  </li>
-			  <li class="hex">
-				<div class="hexIn">
-				  <a class="hexLink" href="#">
-					<div class='img' style='background-image: url(https://images.unsplash.com/photo-1432887382605-0abf9cc49e8f?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
-					<h1 id="demo1">This is a title</h1>
-					<p id="demo2">Some sample text about the article this hexagon leads to</p>
-				  </a>
-				</div>
-			  </li>
-			  <li class="hex">
-				<div class="hexIn">
-				  <a class="hexLink" href="#">
-				 <div class='img' style='background-image: url(https://images.unsplash.com/uploads/14122811862445bc266cf/931448f2?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
-					<h1 id="demo1">This is a title</h1>
-					<p id="demo2">Some sample text about the article this hexagon leads to</p>
-				  </a>
-				</div>
-			  </li>
-			  <li class="hex">
-				<div class="hexIn">
-				  <a class="hexLink" href="#">
-					<div class='img' style='background-image: url(https://images.unsplash.com/photo-1417026846249-f31f7e43fc35?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
-					<h1 id="demo1">This is a title</h1>
-					<p id="demo2">Some sample text about the article this hexagon leads to</p>
-				  </a>
-				</div>
-			  </li>
-			  <li class="hex">
-				<div class="hexIn">
-				  <a class="hexLink" href="#">
-					<div class='img' style='background-image: url(https://images.unsplash.com/uploads/14122811862445bc266cf/931448f2?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
-					<h1 id="demo1">This is a title</h1>
-					<p id="demo2">Some sample text about the article this hexagon leads to</p>
-				  </a>
-				</div>
-			  </li>
-			  <li class="hex">
-				<div class="hexIn">
-				  <a class="hexLink" href="#">
-					<div class='img' style='background-image: url(https://images.unsplash.com/photo-1423145369430-a9ea0de096cd?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
-					<h1 id="demo1">This is a title</h1>
-					<p id="demo2">Some sample text about the article this hexagon leads to</p>
-				  </a>
-				</div>
-			  </li>
-			  
-			 <li class="hex">
-				<div class="hexIn">
-				  <a class="hexLink" href="#">
-					<div class='img' style='background-image:url(https://images.unsplash.com/photo-1417436026361-a033044d901f?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=faa4e192f33e0d6b7ce0e54f15140e42);'></div>
-					<h1 id="demo1">This is a title</h1>
-					<p id="demo2">Some sample text about the article this hexagon leads to</p>
-				  </a>
-				</div>
-			  </li>
-				<li class="hex">
-				<div class="hexIn">
-				  <a class="hexLink" href="#">
-					<div class='img' style='background-image: url(https://images.unsplash.com/photo-1425668273332-3a46ab26b161?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=d453ab3dec298c43415526458b360fa6);'></div>
-					<h1 id="demo1">This is a title</h1>
-					<p id="demo2">Some sample text about the article this hexagon leads to</p>
-				  </a>
-				</div>
-			  </li>
-				  <li class="hex">
-				<div class="hexIn">
-				  <a class="hexLink" href="#">
-						<div class='img' style='background-image: url(https://images.unsplash.com/44/MIbCzcvxQdahamZSNQ26_12082014-IMG_3526.jpg?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=49dab7a5e4b2e28b5707bc2db974c94b);'></div>
-					<h1 id="demo1">This is a title</h1>
-					<p id="demo2">Some sample text about the article this hexagon leads to</p>
-				  </a>
-				</div>
-			  </li>
-				<li class="hex">
-				<div class="hexIn">
-				  <a class="hexLink" href="#">
-					<div class='img' style='background-image: url(https://images.unsplash.com/photo-1432887382605-0abf9cc49e8f?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
-					<h1 id="demo1">This is a title</h1>
-					<p id="demo2">Some sample text about the article this hexagon leads to</p>
-				  </a>
-				</div>
-			  </li>
-				<li class="hex">
-				<div class="hexIn">
-				  <a class="hexLink" href="#">
-					<div class='img' style='background-image: url(https://images.unsplash.com/photo-1417026846249-f31f7e43fc35?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
-					<h1 id="demo1">This is a title</h1>
-					<p id="demo2">Some sample text about the article this hexagon leads to</p>
-				  </a>
-				</div>
-			  </li>
-			</ul>
-		</div>
+      <!-- Tab Button S t a r t -->
+      <div class="buttons-cards gap-10 mt-50">
+        <a href="componet.html" class="btn-primary-fill">Team</a>
+        <a href="services-card.html" class="btn-primary-fill">Services</a>
+        <a href="product-card.html" class="btn-primary-fill">product card</a>
+        <a href="table.html" class="btn-primary-fill">Table</a>
+        <a href="testimonial.html" class="btn-primary-fill">Testimonial</a>
+        <a href="new-card.html" class="btn-primary-fill">new card</a>
+      </div>
+      <!-- End-of Tab Button -->
+
+      <div class="container pt-50 pb-50 mb-100">
+        <div class="grid">
+          <ul id="hexGrid">
+            <li class="hex">
+              <div class="hexIn">
+                <a class="hexLink" href="#">
+                  <div
+                    class="img"
+                    style="
+                      background-image: url(https://images.unsplash.com/photo-1417436026361-a033044d901f?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=faa4e192f33e0d6b7ce0e54f15140e42);
+                    "
+                  ></div>
+                  <h1 id="demo1">This is a title</h1>
+                  <p id="demo2">
+                    Some sample text about the article this hexagon leads to
+                  </p>
+                </a>
+              </div>
+            </li>
+
+            <li class="hex">
+              <div class="hexIn">
+                <a class="hexLink" href="#">
+                  <div
+                    class="img"
+                    style="
+                      background-image: url(https://images.unsplash.com/44/MIbCzcvxQdahamZSNQ26_12082014-IMG_3526.jpg?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=49dab7a5e4b2e28b5707bc2db974c94b);
+                    "
+                  ></div>
+                  <h1 id="demo1">This is a title</h1>
+                  <p id="demo2">
+                    Some sample text about the article this hexagon leads to
+                  </p>
+                </a>
+              </div>
+            </li>
+            <li class="hex">
+              <div class="hexIn">
+                <a class="hexLink" href="#">
+                  <div
+                    class="img"
+                    style="
+                      background-image: url(https://images.unsplash.com/photo-1425668273332-3a46ab26b161?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=d453ab3dec298c43415526458b360fa6);
+                    "
+                  ></div>
+                  <h1 id="demo1">This is a title</h1>
+                  <p id="demo2">
+                    Some sample text about the article this hexagon leads to
+                  </p>
+                </a>
+              </div>
+            </li>
+            <li class="hex">
+              <div class="hexIn">
+                <a class="hexLink" href="#">
+                  <div
+                    class="img"
+                    style="
+                      background-image: url(https://images.unsplash.com/photo-1423145369430-a9ea0de096cd?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);
+                    "
+                  ></div>
+                  <h1 id="demo1">This is a title</h1>
+                  <p id="demo2">
+                    Some sample text about the article this hexagon leads to
+                  </p>
+                </a>
+              </div>
+            </li>
+            <li class="hex">
+              <div class="hexIn">
+                <a class="hexLink" href="#">
+                  <div
+                    class="img"
+                    style="
+                      background-image: url(https://images.unsplash.com/photo-1432887382605-0abf9cc49e8f?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);
+                    "
+                  ></div>
+                  <h1 id="demo1">This is a title</h1>
+                  <p id="demo2">
+                    Some sample text about the article this hexagon leads to
+                  </p>
+                </a>
+              </div>
+            </li>
+            <li class="hex">
+              <div class="hexIn">
+                <a class="hexLink" href="#">
+                  <div
+                    class="img"
+                    style="
+                      background-image: url(https://images.unsplash.com/uploads/14122811862445bc266cf/931448f2?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);
+                    "
+                  ></div>
+                  <h1 id="demo1">This is a title</h1>
+                  <p id="demo2">
+                    Some sample text about the article this hexagon leads to
+                  </p>
+                </a>
+              </div>
+            </li>
+            <li class="hex">
+              <div class="hexIn">
+                <a class="hexLink" href="#">
+                  <div
+                    class="img"
+                    style="
+                      background-image: url(https://images.unsplash.com/photo-1417026846249-f31f7e43fc35?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);
+                    "
+                  ></div>
+                  <h1 id="demo1">This is a title</h1>
+                  <p id="demo2">
+                    Some sample text about the article this hexagon leads to
+                  </p>
+                </a>
+              </div>
+            </li>
+            <li class="hex">
+              <div class="hexIn">
+                <a class="hexLink" href="#">
+                  <div
+                    class="img"
+                    style="
+                      background-image: url(https://images.unsplash.com/uploads/14122811862445bc266cf/931448f2?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);
+                    "
+                  ></div>
+                  <h1 id="demo1">This is a title</h1>
+                  <p id="demo2">
+                    Some sample text about the article this hexagon leads to
+                  </p>
+                </a>
+              </div>
+            </li>
+            <li class="hex">
+              <div class="hexIn">
+                <a class="hexLink" href="#">
+                  <div
+                    class="img"
+                    style="
+                      background-image: url(https://images.unsplash.com/photo-1423145369430-a9ea0de096cd?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);
+                    "
+                  ></div>
+                  <h1 id="demo1">This is a title</h1>
+                  <p id="demo2">
+                    Some sample text about the article this hexagon leads to
+                  </p>
+                </a>
+              </div>
+            </li>
+
+            <li class="hex">
+              <div class="hexIn">
+                <a class="hexLink" href="#">
+                  <div
+                    class="img"
+                    style="
+                      background-image: url(https://images.unsplash.com/photo-1417436026361-a033044d901f?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=faa4e192f33e0d6b7ce0e54f15140e42);
+                    "
+                  ></div>
+                  <h1 id="demo1">This is a title</h1>
+                  <p id="demo2">
+                    Some sample text about the article this hexagon leads to
+                  </p>
+                </a>
+              </div>
+            </li>
+            <li class="hex">
+              <div class="hexIn">
+                <a class="hexLink" href="#">
+                  <div
+                    class="img"
+                    style="
+                      background-image: url(https://images.unsplash.com/photo-1425668273332-3a46ab26b161?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=d453ab3dec298c43415526458b360fa6);
+                    "
+                  ></div>
+                  <h1 id="demo1">This is a title</h1>
+                  <p id="demo2">
+                    Some sample text about the article this hexagon leads to
+                  </p>
+                </a>
+              </div>
+            </li>
+            <li class="hex">
+              <div class="hexIn">
+                <a class="hexLink" href="#">
+                  <div
+                    class="img"
+                    style="
+                      background-image: url(https://images.unsplash.com/44/MIbCzcvxQdahamZSNQ26_12082014-IMG_3526.jpg?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=49dab7a5e4b2e28b5707bc2db974c94b);
+                    "
+                  ></div>
+                  <h1 id="demo1">This is a title</h1>
+                  <p id="demo2">
+                    Some sample text about the article this hexagon leads to
+                  </p>
+                </a>
+              </div>
+            </li>
+            <li class="hex">
+              <div class="hexIn">
+                <a class="hexLink" href="#">
+                  <div
+                    class="img"
+                    style="
+                      background-image: url(https://images.unsplash.com/photo-1432887382605-0abf9cc49e8f?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);
+                    "
+                  ></div>
+                  <h1 id="demo1">This is a title</h1>
+                  <p id="demo2">
+                    Some sample text about the article this hexagon leads to
+                  </p>
+                </a>
+              </div>
+            </li>
+            <li class="hex">
+              <div class="hexIn">
+                <a class="hexLink" href="#">
+                  <div
+                    class="img"
+                    style="
+                      background-image: url(https://images.unsplash.com/photo-1417026846249-f31f7e43fc35?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);
+                    "
+                  ></div>
+                  <h1 id="demo1">This is a title</h1>
+                  <p id="demo2">
+                    Some sample text about the article this hexagon leads to
+                  </p>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
         <div class="row g-24 mt-100">
-                <div class="view-wrapper col-xl-12">
-                    <div class="single-product grids-views radius-8 h-calc">
-                        <div class="product-img position-relative overflow-hidden">
-                            <a href="#" target="_blank"> <img src="https://static.vecteezy.com/system/resources/thumbnails/021/515/695/small/ai-technology-artificial-intelligence-banner-design-illustration-vector.jpg" class="img-fluid" alt="img"> </a>
-                            
-                            <div class="quick-action-buttons position-absolute d-flex flex-column gap-6">
-                                <a href="error-404.html">  <i class="ri-heart-line"></i></a>
-                                <a href="error-404.html"><i class="ri-shopping-cart-line"></i></a>
-                            </div>
-                        </div>
-                        <div class="w-100">
-                            <div class="product-info">
-                                <div class="product-info-title mb-8">
-                                    <a href="#" target="_blank">
-                                        <h4 class="colorEffect line-clamp-2 text-18 mb-6 font-500">Onest LMS - Online Learning Management System Web Application </h4>
-                                    </a>
-                                    <p class="pera text-14 text-capitalize"> <i>by HTML-kit</i> in project management tools</p>
+          <div class="view-wrapper col-xl-12">
+            <div class="single-product grids-views radius-8 h-calc">
+              <div class="product-img position-relative overflow-hidden">
+                <a href="#" target="_blank">
+                  <img
+                    src="https://static.vecteezy.com/system/resources/thumbnails/021/515/695/small/ai-technology-artificial-intelligence-banner-design-illustration-vector.jpg"
+                    class="img-fluid"
+                    alt="img"
+                  />
+                </a>
 
-                                    <div class="others-info mt-15 d-none">
-                                        <p class="text-capitalize">
-                                            <strong>software version : </strong>PHP 8.x, Mysql 8.x
-                                        </p>
-                                        <p class="text-capitalize">
-                                            <strong>software : </strong> Laravel
-                                        </p>
-                                        <p class="text-capitalize d-flex gap-2 align-items-center flex-wrap">
-                                            <strong class="w-100">File types : </strong>
-                                            <span class="file-type-tag"> javascript js</span>
-                                            <span class="file-type-tag"> PHP</span>
-                                            <span class="file-type-tag"> JSON</span>
-                                            <span class="file-type-tag"> SQL</span>
-                                            <span class="file-type-tag"> HTML</span>
-                                            <span class="file-type-tag"> Sass</span>
-                                            <span class="file-type-tag"> Css</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="contents-wrapper">
-                                    <div class="contents">
-                                        <!-- Price -->
-                                        <div class="price d-flex align-items-center gap-2">
-                                            <del class="text-18 text-paragraph font-700 mb-10 d-block">$159</del>
-                                            <span class="text-20 text-title font-700 mb-10 d-block text-primary">$59</span>
-                                        </div>
-                                        <div class="ratings d-flex gap-1 mb-1">
-                                            <div class="d-flex align-items-center text-13 gap-1">
-                                                <i class="ri-star-fill text-13 text-yellow"></i>
-                                                <i class="ri-star-fill text-13 text-yellow"></i>
-                                                <i class="ri-star-fill text-13 text-yellow"></i>
-                                                <i class="ri-star-fill text-13 text-yellow"></i>
-                                                <i class="ri-star-fill text-13 text-yellow"></i>
-                                            </div>
-                                            <span class="text-primary text-12 font-500 ">(105)</span>
-                                        </div>
-
-                                        <div class="others-info w-100">
-                                            <h5 class="text-12 font-400 text-gray mb-6">1.5k Sales </h5>
-                                            <h5 class="updated-date d-none text-12 font-400 text-gray text-capitalize">Last updated : 13 july 23</h5>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex align-items-center gap-8">
-                                        <button class="cart-btn"><i class="las la-shopping-cart"></i></button>
-                                        <a href="#" class="btn-primary-outline" target="_blank">preview</a>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div
+                  class="quick-action-buttons position-absolute d-flex flex-column gap-6"
+                >
+                  <a href="error-404.html"> <i class="ri-heart-line"></i></a>
+                  <a href="error-404.html"
+                    ><i class="ri-shopping-cart-line"></i
+                  ></a>
                 </div>
-				
-                <div class="view-wrapper col-xl-12">
-                    <div class="single-product grids-views radius-8 h-calc">
-                        <div class="product-img position-relative overflow-hidden">
-                            <a href="#" target="_blank"> <img src="https://static.vecteezy.com/system/resources/thumbnails/021/515/695/small/ai-technology-artificial-intelligence-banner-design-illustration-vector.jpg" class="img-fluid" alt="img"> </a>
-                            
-                            <div class="quick-action-buttons position-absolute d-flex flex-column gap-6">
-                                <a href="error-404.html">  <i class="ri-heart-line"></i></a>
-                                <a href="error-404.html"><i class="ri-shopping-cart-line"></i></a>
-                            </div>
-                        </div>
-                        <div class="w-100">
-                            <div class="product-info">
-                                <div class="product-info-title mb-8">
-                                    <a href="#" target="_blank">
-                                        <h4 class="colorEffect line-clamp-2 text-18 mb-6 font-500">Onest CRM - Customer Relation Management System  </h4>
-                                    </a>
-                                    <p class="pera text-14 text-capitalize"> <i>by HTML-kit</i> in project management tools</p>
+              </div>
+              <div class="w-100">
+                <div class="product-info">
+                  <div class="product-info-title mb-8">
+                    <a href="#" target="_blank">
+                      <h4
+                        class="colorEffect line-clamp-2 text-18 mb-6 font-500"
+                      >
+                        Onest LMS - Online Learning Management System Web
+                        Application
+                      </h4>
+                    </a>
+                    <p class="pera text-14 text-capitalize">
+                      <i>by HTML-kit</i> in project management tools
+                    </p>
 
-                                    <div class="others-info mt-15 d-none">
-                                        <p class="text-capitalize">
-                                            <strong>software version : </strong>PHP 8.x, Mysql 8.x
-                                        </p>
-                                        <p class="text-capitalize">
-                                            <strong>software : </strong> Laravel
-                                        </p>
-                                        <p class="text-capitalize d-flex gap-2 align-items-center flex-wrap">
-                                            <strong class="w-100">File types : </strong>
-                                            <span class="file-type-tag"> javascript js</span>
-                                            <span class="file-type-tag"> PHP</span>
-                                            <span class="file-type-tag"> JSON</span>
-                                            <span class="file-type-tag"> SQL</span>
-                                            <span class="file-type-tag"> HTML</span>
-                                            <span class="file-type-tag"> Sass</span>
-                                            <span class="file-type-tag"> Css</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="contents-wrapper">
-                                    <div class="contents">
-                                        <!-- Price -->
-                                        <div class="price d-flex align-items-center gap-2">
-                                            <del class="text-18 text-paragraph font-700 mb-10 d-block">$159</del>
-                                            <span class="text-20 text-title font-700 mb-10 d-block text-primary">$59</span>
-                                        </div>
-                                        <div class="ratings d-flex gap-1 mb-1">
-                                            <div class="d-flex align-items-center text-13 gap-1">
-                                                <i class="ri-star-fill text-13 text-yellow"></i>
-                                                <i class="ri-star-fill text-13 text-yellow"></i>
-                                                <i class="ri-star-fill text-13 text-yellow"></i>
-                                                <i class="ri-star-fill text-13 text-yellow"></i>
-                                                <i class="ri-star-fill text-13 text-yellow"></i>
-                                            </div>
-                                            <span class="text-primary text-12 font-500 ">(105)</span>
-                                        </div>
-
-                                        <div class="others-info w-100">
-                                            <h5 class="text-12 font-400 text-gray mb-6">1.5k Sales </h5>
-                                            <h5 class="updated-date d-none text-12 font-400 text-gray text-capitalize">Last updated : 13 july 23</h5>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex align-items-center gap-8">
-                                        <button class="cart-btn"><i class="las la-shopping-cart"></i></button>
-                                        <a href="#" class="btn-primary-outline" target="_blank">preview</a>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
+                    <div class="others-info mt-15 d-none">
+                      <p class="text-capitalize">
+                        <strong>software version : </strong>PHP 8.x, Mysql 8.x
+                      </p>
+                      <p class="text-capitalize">
+                        <strong>software : </strong> Laravel
+                      </p>
+                      <p
+                        class="text-capitalize d-flex gap-2 align-items-center flex-wrap"
+                      >
+                        <strong class="w-100">File types : </strong>
+                        <span class="file-type-tag"> javascript js</span>
+                        <span class="file-type-tag"> PHP</span>
+                        <span class="file-type-tag"> JSON</span>
+                        <span class="file-type-tag"> SQL</span>
+                        <span class="file-type-tag"> HTML</span>
+                        <span class="file-type-tag"> Sass</span>
+                        <span class="file-type-tag"> Css</span>
+                      </p>
                     </div>
+                  </div>
+                  <div class="contents-wrapper">
+                    <div class="contents">
+                      <!-- Price -->
+                      <div class="price d-flex align-items-center gap-2">
+                        <del
+                          class="text-18 text-paragraph font-700 mb-10 d-block"
+                          >$159</del
+                        >
+                        <span
+                          class="text-20 text-title font-700 mb-10 d-block text-primary"
+                          >$59</span
+                        >
+                      </div>
+                      <div class="ratings d-flex gap-1 mb-1">
+                        <div class="d-flex align-items-center text-13 gap-1">
+                          <i class="ri-star-fill text-13 text-yellow"></i>
+                          <i class="ri-star-fill text-13 text-yellow"></i>
+                          <i class="ri-star-fill text-13 text-yellow"></i>
+                          <i class="ri-star-fill text-13 text-yellow"></i>
+                          <i class="ri-star-fill text-13 text-yellow"></i>
+                        </div>
+                        <span class="text-primary text-12 font-500">(105)</span>
+                      </div>
+
+                      <div class="others-info w-100">
+                        <h5 class="text-12 font-400 text-gray mb-6">
+                          1.5k Sales
+                        </h5>
+                        <h5
+                          class="updated-date d-none text-12 font-400 text-gray text-capitalize"
+                        >
+                          Last updated : 13 july 23
+                        </h5>
+                      </div>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-8">
+                      <button class="cart-btn">
+                        <i class="las la-shopping-cart"></i>
+                      </button>
+                      <a href="#" class="btn-primary-outline" target="_blank"
+                        >preview</a
+                      >
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
+
+          <div class="view-wrapper col-xl-12">
+            <div class="single-product grids-views radius-8 h-calc">
+              <div class="product-img position-relative overflow-hidden">
+                <a href="#" target="_blank">
+                  <img
+                    src="https://static.vecteezy.com/system/resources/thumbnails/021/515/695/small/ai-technology-artificial-intelligence-banner-design-illustration-vector.jpg"
+                    class="img-fluid"
+                    alt="img"
+                  />
+                </a>
+
+                <div
+                  class="quick-action-buttons position-absolute d-flex flex-column gap-6"
+                >
+                  <a href="error-404.html"> <i class="ri-heart-line"></i></a>
+                  <a href="error-404.html"
+                    ><i class="ri-shopping-cart-line"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="w-100">
+                <div class="product-info">
+                  <div class="product-info-title mb-8">
+                    <a href="#" target="_blank">
+                      <h4
+                        class="colorEffect line-clamp-2 text-18 mb-6 font-500"
+                      >
+                        Onest CRM - Customer Relation Management System
+                      </h4>
+                    </a>
+                    <p class="pera text-14 text-capitalize">
+                      <i>by HTML-kit</i> in project management tools
+                    </p>
+
+                    <div class="others-info mt-15 d-none">
+                      <p class="text-capitalize">
+                        <strong>software version : </strong>PHP 8.x, Mysql 8.x
+                      </p>
+                      <p class="text-capitalize">
+                        <strong>software : </strong> Laravel
+                      </p>
+                      <p
+                        class="text-capitalize d-flex gap-2 align-items-center flex-wrap"
+                      >
+                        <strong class="w-100">File types : </strong>
+                        <span class="file-type-tag"> javascript js</span>
+                        <span class="file-type-tag"> PHP</span>
+                        <span class="file-type-tag"> JSON</span>
+                        <span class="file-type-tag"> SQL</span>
+                        <span class="file-type-tag"> HTML</span>
+                        <span class="file-type-tag"> Sass</span>
+                        <span class="file-type-tag"> Css</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="contents-wrapper">
+                    <div class="contents">
+                      <!-- Price -->
+                      <div class="price d-flex align-items-center gap-2">
+                        <del
+                          class="text-18 text-paragraph font-700 mb-10 d-block"
+                          >$159</del
+                        >
+                        <span
+                          class="text-20 text-title font-700 mb-10 d-block text-primary"
+                          >$59</span
+                        >
+                      </div>
+                      <div class="ratings d-flex gap-1 mb-1">
+                        <div class="d-flex align-items-center text-13 gap-1">
+                          <i class="ri-star-fill text-13 text-yellow"></i>
+                          <i class="ri-star-fill text-13 text-yellow"></i>
+                          <i class="ri-star-fill text-13 text-yellow"></i>
+                          <i class="ri-star-fill text-13 text-yellow"></i>
+                          <i class="ri-star-fill text-13 text-yellow"></i>
+                        </div>
+                        <span class="text-primary text-12 font-500">(105)</span>
+                      </div>
+
+                      <div class="others-info w-100">
+                        <h5 class="text-12 font-400 text-gray mb-6">
+                          1.5k Sales
+                        </h5>
+                        <h5
+                          class="updated-date d-none text-12 font-400 text-gray text-capitalize"
+                        >
+                          Last updated : 13 july 23
+                        </h5>
+                      </div>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-8">
+                      <button class="cart-btn">
+                        <i class="las la-shopping-cart"></i>
+                      </button>
+                      <a href="#" class="btn-primary-outline" target="_blank"
+                        >preview</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-		
-		
-		  <!-- Feature Area S t a r t -->
-        <section class="feature-area section-padding2 section-bg-one">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-7">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle mb-80 text-center">
-                            <h2 class="title text-capitalize font-700">What You will Get From Us?</h2>
-                            <p class="pera">We provide a wide array of services to empower your digital journey.  With our expertise and dedication, you can never go wrong. We Got You Covered!</p>
-                        </div> 
-                    </div>
-                </div>
-                <div class="row g-24">
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-feature tilt-effects h-calc">
-                            <div class="d-flex gap-10 mb-10 justify-content-between align-content-center">
-                                <div class="color-line"></div>
-                                <span class="sticker">Free</span>
-                            </div>
-                            <div class="cat-caption">
-                                <h4 class="title line-clamp-1 font-600 text-title">Server Setup</h4>
-                                <p class="pear line-clamp-3">Efficient and credible server setup is vital for a smooth-running online presence. Our team of experts will handle the intricate aspects of server configuration, ensuring optimal performance, security, and scalability. Trust us to set up the backbone of your digital infrastructure. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-feature tilt-effects h-calc">
-                            <div class="d-flex gap-10 mb-10 justify-content-between align-content-center">
-                                <div class="color-line"></div>
-                                <span class="sticker">Free</span>
-                            </div>
-                            <div class="cat-caption">
-                                <h4 class="title line-clamp-1 font-600 text-title">Buy Domain / Hosting</h4>
-                                <p class="pear line-clamp-3"> Choosing the right domain and hosting service is paramount for establishing your online identity. We guide you through this process, helping you select the perfect domain name and providing reliable hosting options that cater to your specific needs. Let us simplify the domain and hosting acquisition process for you. </p>
-                            </div>
-                        </div>
-                    </div>
-					
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-feature tilt-effects h-calc">
-                            <div class="d-flex gap-10 mb-10 justify-content-between align-content-center">
-                                <div class="color-line"></div>
-                                <span class="sticker">Free</span>
-                            </div>
-                            <div class="cat-caption">
-                                <h4 class="title line-clamp-1 font-600 text-title">It Support</h4>
-                                <p class="pear line-clamp-3">Technology hiccups can hinder productivity and disrupt your business operations. Our dedicated IT support team is always ready to assist you. Whether it’s troubleshooting software issues or general technical guidance, we are here to ensure your systems run seamlessly. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-feature tilt-effects h-calc">
-                            <div class="d-flex gap-10 mb-10 justify-content-between align-content-center">
-                                <div class="color-line"></div>
-                                <span class="sticker">Free</span>
-                            </div>
-                            <div class="cat-caption">
-                                <h4 class="title line-clamp-1 font-600 text-title">Server Backup</h4>
-                                <p class="pear line-clamp-3">Protecting your valuable data is critical. Our server backup solutions guarantee that your information remains secure and retrievable in case of unprecedented incidents. With automated backups and redundant storage, you can have peace of mind knowing your data is safe with us. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-feature tilt-effects h-calc">
-                            <div class="d-flex gap-10 mb-10 justify-content-between align-content-center">
-                                <div class="color-line"></div>
-                                <span class="sticker">Free</span>
-                            </div>
-                            <div class="cat-caption">
-                                <h4 class="title line-clamp-1 font-600 text-title">Quality Assurance</h4>
-                                <p class="pear line-clamp-3">To make sure your Software meets the highest standards, our quality assurance experts employ rigorous testing methodologies. From functional testing to performance and usability testing, we leave no stone unturned in delivering reliable, bug-free applications that exceed your expectations.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-feature tilt-effects h-calc">
-                            <div class="d-flex gap-10 mb-10 justify-content-between align-content-center">
-                                <div class="color-line"></div>
-                                <span class="sticker">Free</span>
-                            </div>
-                            <div class="cat-caption">
-                                <h4 class="title line-clamp-1 font-600 text-title">Domain Setup</h4>
-                                <p class="pear line-clamp-3">We take care of the entire domain set up process, from domain registration to DNS configuration. Our team ensures that your domain is correctly linked to your website, allowing for seamless connectivity. Trust us to handle the technical intricacies while you solely focus on your business operations. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-feature tilt-effects h-calc">
-                            <div class="d-flex gap-10 mb-10 justify-content-between align-content-center">
-                                <div class="color-line"></div>
-                                <span class="sticker">Free</span>
-                            </div>
-                            <div class="cat-caption">
-                                <h4 class="title line-clamp-1 font-600 text-title">System Integration</h4>
-                                <p class="pear line-clamp-3">Efficient system integration is important for streamlining your business processes and maximizing productivity. Our experts possess the knowledge to integrate diverse software systems, ensuring smooth data flow and synchronization across various platforms. Experience seamless integration with our tailored solutions. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-feature tilt-effects h-calc">
-                            <div class="d-flex gap-10 mb-10 justify-content-between align-content-center">
-                                <div class="color-line"></div>
-                                <span class="sticker">Free</span>
-                            </div>
-							
-                            <div class="cat-caption">
-                                <h4 class="title line-clamp-1 font-600 text-title">Cloud Computing </h4>
-                                <p class="pear line-clamp-3"> Unlock the power of cloud computing with our cutting-edge solutions. We help you harness the scalability, flexibility, and cost-efficiency of cloud services, enabling you to store, manage, and access your data and applications securely from anywhere. Embrace the cloud and transform your business operations. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      </div>
+
+      <!-- Feature Area S t a r t -->
+      <section class="feature-area section-padding2 section-bg-one">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-7">
+              <!-- Section Tittle -->
+              <div class="section-tittle mb-80 text-center">
+                <h2 class="title text-capitalize font-700">
+                  What You will Get From Us?
+                </h2>
+                <p class="pera">
+                  We provide a wide array of services to empower your digital
+                  journey. With our expertise and dedication, you can never go
+                  wrong.We Got You Covered!
+                </p>
+              </div>
             </div>
-        </section>
-        <!-- End-of feature -->
-		
-		<section class="new-2023 mt-50">
-		
-			<div class="container">
-			<div class="row">
-			  <div class="col-lg-3">
-				<div class="new-card">
-				  <div class="rectangle"></div>
-				  <div class="new-card-img">
-					<img src="https://images.unsplash.com/photo-1606002830191-c1b4f20e6cda?auto=format&fit=crop&q=80&w=1965&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Herse Headman">
-					<div class="new-card-img-overlay">
-					  <p>arch <br />owl</p>
-					</div>
-				  </div>
-				  <div class="new-card-content">
-					<h2>herse headman</h2>
-					<p>CO-Founder</p>
-				  </div>
-				</div>
-			  </div>
-			  <div class="col-lg-3">
-				<div class="new-card">
-				  <div class="rectangle"></div>
-				  <div class="new-card-img">
-					<img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Paulina Smith">
-					<div class="new-card-img-overlay">
-					  <p>arch <br />owl</p>
-					</div>
-				  </div>
-				  <div class="new-card-content">
-					<h2>paulina smith</h2>
-					<p>Manager</p>
-				  </div>
-				</div>
-			  </div>
-			</div>
-		  </div>
+          </div>
+          <div class="row g-24">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="single-feature tilt-effects h-calc">
+                <div
+                  class="d-flex gap-10 mb-10 justify-content-between align-content-center"
+                >
+                  <div class="color-line"></div>
+                  <span class="sticker">Free</span>
+                </div>
+                <div class="cat-caption">
+                  <h4 class="title line-clamp-1 font-600 text-title">
+                    Server Setup
+                  </h4>
+                  <p class="pear line-clamp-3">
+                    Efficient and credible server setup is vital for a
+                    smooth-running online presence. Our team of experts will
+                    handle the intricate aspects of server configuration,
+                    ensuring optimal performance, security, and scalability.
+                    Trust us to set up the backbone of your digital
+                    infrastructure.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="single-feature tilt-effects h-calc">
+                <div
+                  class="d-flex gap-10 mb-10 justify-content-between align-content-center"
+                >
+                  <div class="color-line"></div>
+                  <span class="sticker">Free</span>
+                </div>
+                <div class="cat-caption">
+                  <h4 class="title line-clamp-1 font-600 text-title">
+                    Buy Domain / Hosting
+                  </h4>
+                  <p class="pear line-clamp-3">
+                    Choosing the right domain and hosting service is paramount
+                    for establishing your online identity. We guide you through
+                    this process, helping you select the perfect domain name and
+                    providing reliable hosting options that cater to your
+                    specific needs. Let us simplify the domain and hosting
+                    acquisition process for you.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-		</section>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="single-feature tilt-effects h-calc">
+                <div
+                  class="d-flex gap-10 mb-10 justify-content-between align-content-center"
+                >
+                  <div class="color-line"></div>
+                  <span class="sticker">Free</span>
+                </div>
+                <div class="cat-caption">
+                  <h4 class="title line-clamp-1 font-600 text-title">
+                    It Support
+                  </h4>
+                  <p class="pear line-clamp-3">
+                    Technology hiccups can hinder productivity and disrupt your
+                    business operations. Our dedicated IT support team is always
+                    ready to assist you. Whether it’s troubleshooting software
+                    issues or general technical guidance, we are here to ensure
+                    your systems run seamlessly.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="single-feature tilt-effects h-calc">
+                <div
+                  class="d-flex gap-10 mb-10 justify-content-between align-content-center"
+                >
+                  <div class="color-line"></div>
+                  <span class="sticker">Free</span>
+                </div>
+                <div class="cat-caption">
+                  <h4 class="title line-clamp-1 font-600 text-title">
+                    Server Backup
+                  </h4>
+                  <p class="pear line-clamp-3">
+                    Protecting your valuable data is critical. Our server backup
+                    solutions guarantee that your information remains secure and
+                    retrievable in case of unprecedented incidents. With
+                    automated backups and redundant storage, you can have peace
+                    of mind knowing your data is safe with us.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="single-feature tilt-effects h-calc">
+                <div
+                  class="d-flex gap-10 mb-10 justify-content-between align-content-center"
+                >
+                  <div class="color-line"></div>
+                  <span class="sticker">Free</span>
+                </div>
+                <div class="cat-caption">
+                  <h4 class="title line-clamp-1 font-600 text-title">
+                    Quality Assurance
+                  </h4>
+                  <p class="pear line-clamp-3">
+                    To make sure your Software meets the highest standards, our
+                    quality assurance experts employ rigorous testing
+                    methodologies. From functional testing to performance and
+                    usability testing, we leave no stone unturned in delivering
+                    reliable, bug-free applications that exceed your
+                    expectations.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="single-feature tilt-effects h-calc">
+                <div
+                  class="d-flex gap-10 mb-10 justify-content-between align-content-center"
+                >
+                  <div class="color-line"></div>
+                  <span class="sticker">Free</span>
+                </div>
+                <div class="cat-caption">
+                  <h4 class="title line-clamp-1 font-600 text-title">
+                    Domain Setup
+                  </h4>
+                  <p class="pear line-clamp-3">
+                    We take care of the entire domain set up process, from
+                    domain registration to DNS configuration. Our team ensures
+                    that your domain is correctly linked to your website,
+                    allowing for seamless connectivity. Trust us to handle the
+                    technical intricacies while you solely focus on your
+                    business operations.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="single-feature tilt-effects h-calc">
+                <div
+                  class="d-flex gap-10 mb-10 justify-content-between align-content-center"
+                >
+                  <div class="color-line"></div>
+                  <span class="sticker">Free</span>
+                </div>
+                <div class="cat-caption">
+                  <h4 class="title line-clamp-1 font-600 text-title">
+                    System Integration
+                  </h4>
+                  <p class="pear line-clamp-3">
+                    Efficient system integration is important for streamlining
+                    your business processes and maximizing productivity. Our
+                    experts possess the knowledge to integrate diverse software
+                    systems, ensuring smooth data flow and synchronization
+                    across various platforms. Experience seamless integration
+                    with our tailored solutions.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="single-feature tilt-effects h-calc">
+                <div
+                  class="d-flex gap-10 mb-10 justify-content-between align-content-center"
+                >
+                  <div class="color-line"></div>
+                  <span class="sticker">Free</span>
+                </div>
 
+                <div class="cat-caption">
+                  <h4 class="title line-clamp-1 font-600 text-title">
+                    Cloud Computing
+                  </h4>
+                  <p class="pear line-clamp-3">
+                    Unlock the power of cloud computing with our cutting-edge
+                    solutions. We help you harness the scalability, flexibility,
+                    and cost-efficiency of cloud services, enabling you to
+                    store, manage, and access your data and applications
+                    securely from anywhere. Embrace the cloud and transform your
+                    business operations.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End-of feature -->
+
+      <section class="new-2023 mt-50">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="new-card">
+                <div class="rectangle"></div>
+                <div class="new-card-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1606002830191-c1b4f20e6cda?auto=format&fit=crop&q=80&w=1965&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Herse Headman"
+                  />
+                  <div class="new-card-img-overlay">
+                    <p>arch <br />owl</p>
+                  </div>
+                </div>
+                <div class="new-card-content">
+                  <h2>herse headman</h2>
+                  <p>CO-Founder</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="new-card">
+                <div class="rectangle"></div>
+                <div class="new-card-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Paulina Smith"
+                  />
+                  <div class="new-card-img-overlay">
+                    <p>arch <br />owl</p>
+                  </div>
+                </div>
+                <div class="new-card-content">
+                  <h2>paulina smith</h2>
+                  <p>Manager</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- Footer -->
-    <footer>
-        
-    </footer>
+    <footer></footer>
     <!-- Mouse Effect -->
     <div class="mouseCursor cursorOuter"></div>
     <div class="mouseCursor cursorInner"></div>
     <!-- Scroll Up  -->
     <div class="progressParent">
-        <svg class="backCircle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
+      <svg
+        class="backCircle svg-inner"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
     </div>
     <!-- End-of Scroll-->
-   
+
     <!-- jquery-->
     <script src="assets/js/jquery-3.7.0.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
@@ -787,5 +1103,5 @@ transition: 0.8s;
     <script src="assets/js/plugin.js"></script>
     <!-- Main js-->
     <script src="assets/js/main.js"></script>
-</body>
+  </body>
 </html>
