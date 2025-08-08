@@ -5,7 +5,44 @@
     @url 	  : https://github.com/sai4ul/init-html-starter-kit
 
 -----------------------------------------------------------------------------------*/
+:root {
+    —font-title: "";
+    —font-body: "";
+    --white: #fff;
+    --light: #d8dbe0;
+    --dark: #28292c;
+    --info: #0dcaf0;
 
+    —primary: #555;
+    --secondary: #666;
+    --tertiary: #789;
+
+    --primary-rgb: 0,15,123;
+    --secondary-rgb: 40,185,94;
+    --tertiary-rgb: 240,120,60;
+
+    --primary-title: #161F2B;
+    --secondary-title: #151515;
+    --tertiary-title: #494E5C;
+
+    --primary-subtitle: #23262F;
+    --secondary-subtitle: #3B3B3B;
+    --primary-paragraph: #3D454F;
+    --secondary-paragraph: #2F4158;
+    --tertiary-paragraph: #787787;
+
+    --primary-btn:#000;
+    --secondary-btn: #000;
+    --tertiary-btn: #304839;
+
+    --section-bg-one: #FFFFF3;
+    --section-bg-two: #f1f1f1;
+    --section-bg-three: #E5F1FF;
+    --primary-border: rgba(168,168,168,0.42);
+    --secondary-border: #dddddd70;
+    --tertiary-border: #D0D5DD;
+    --primary-shadow: 0px 4.12121px 49.4545px rgba(0,0,0,0.08);
+}
 
 // Global SCSS                     
     @import "global/mixins";            
