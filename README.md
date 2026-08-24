@@ -1,3 +1,5 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Y4H025OMTP)
+
 # HTML Starter Kit
 
 Starter Kit for Static Websites. SCSS support. Evato - `Themeforest - Codeanyon & colorLib ` These marketplaces have over 1000's of approved template web applications using this HTML starter kit so you can undoubtedly use. 
